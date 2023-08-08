@@ -18,13 +18,14 @@ function App() {
           </div>
         </div>
 
-        <div className="portfolio-about-me w-3/4">
+        <div className="portfolio-about-me w-100">
           <p className="text-gray-600">
-            What's up! My name is
+            What's up! Welcome to my Portfolio Card, my name is
           </p>
-          <h1 className="text-2xl font-bold mb-4">Bazinga</h1>
+          <h1 className="text-2xl font-bold mb-2">Bazinga</h1>
           <p className="text-gray-600">
-            a Front-End and Back-End developer who needs a job, please hire me!
+            a Full-Stack developer with a passion for creativity, simplicity, and the aesthetically pleasing. 
+            <br></br>Take a look around!
           </p>
           {/* You can add more content or components here */}
         </div>
@@ -44,45 +45,44 @@ function App() {
         
         <div className="flex space-x-4 items-center">
         <a
-                  href="https://github.com/link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="github-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
-                  hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:scale-110 duration-100"
-                >
-                  <img
-                    src={process.env.PUBLIC_URL + '/icons/github.svg'}
-                    alt="GitHub"
-                    className=""
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/link/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="instagram-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
-                  hover:bg-gradient-to-t hover:from-pink-500 hover:to-yellow-500 ... hover:scale-110 duration-100"
-                >
-                  <img
-                    src={process.env.PUBLIC_URL + '/icons/instagram.svg'}
-                    alt="Instagram"
-                    className=""
-                  />
-                </a>
-                <a
-                  href="https://linkedin.com/in/link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
-                  hover:bg-gradient-to-t hover:from-blue-500 hover:to-blue-200 ... hover:scale-110 duration-100"
-                >
-                  <img
-                    src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
-                    alt="LinkedIn"
-                    className=""
-                  />
-                </a>
-          {/* Similar code for other social buttons */}
+          href="https://github.com/link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
+          hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:scale-110 duration-100"
+        >
+          <img
+            src={process.env.PUBLIC_URL + '/icons/github.svg'}
+            alt="GitHub"
+            className=""
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/link/"                target="_blank"
+          rel="noopener noreferrer"
+          className="instagram-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
+          hover:bg-gradient-to-t hover:from-pink-500 hover:to-yellow-500 ... hover:scale-110 duration-100"
+        >
+          <img
+            src={process.env.PUBLIC_URL + '/icons/instagram.svg'}
+            alt="Instagram"
+            className=""
+          />
+        </a>
+        <a
+          href="https://linkedin.com/in/link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
+          hover:bg-gradient-to-t hover:from-blue-500 hover:to-blue-200 ... hover:scale-110 duration-100"
+        >
+          <img
+            src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
+            alt="LinkedIn"
+            className=""
+          />
+        </a>
+        {/* Similar code for other social buttons */}
         </div>
       </div>
     </div>
