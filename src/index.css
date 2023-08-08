@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: JetBrains Mono, Proxima Nova, system-ui, sans-serif;
-  }
+/* src/index.css */
+.portfolio-card-container {
+  background-image: linear-gradient(to bottom, rgba(166,201,255,1), rgba(189,147,243,0.5), rgba(189,147,243,0));
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
-/* src/index.css */
 .gradient-border {
   width: 100px; /* Adjust the width as needed */
   height: 100px; /* Adjust the height as needed */
