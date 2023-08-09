@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import './index.css';
-import ContactModal from './Contact';
+import Contact from './Contact';
 
-function App() {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+const App = () => {
+  const [showModal, setShowModal] = useState(false);
 
-  const openContactModal = () => {
-    console.log('Opening contact modal');
-    setIsContactModalOpen(true);
+  const openModal = () => {
+    setShowModal(true);
   };
 
-  const closeContactModal = () => {
-    setIsContactModalOpen(false);
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
-    <div className="portfolio-container flex flex-col items-center justify-center h-screen bg-gray-000">
-      {/* Portfolio Card Container */}
+    <div className="portfolio-container flex flex-col items-center justify-center h-screen bg-gray-000">      
+    {/* Portfolio Card Container */}
       <div className="portfolio-card-container flex p-8 rounded-t-2xl 
       bg-gradient-to-b from-blue-300 via-purple-200 to-transparent">
         <div className="w-1/4 p-6">
@@ -57,26 +56,29 @@ function App() {
       </div>
 
       {/* Buttons Container */}
-      <div className="portfolio-buttons-container flex justify-between p-4 pt-24 bg-gray-000 rounded-b-2xl
-      bg-gradient-to-t from-transparent via-purple-50 to-transparent">
+      <div className="portfolio-buttons-container flex justify-between p-4 pt-24 bg-gray-000 rounded-b-2xl bg-gradient-to-t from-transparent via-purple-50 to-transparent">
         <a
           href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
           target="_blank"
           rel="noopener noreferrer"
-          className="resume-button flex justify-center font-sans text-xl/9 text-white p-2 mr-4 w-48 h-14 
-          rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
+          className="resume-button flex justify-center font-sans text-xl/9 text-white p-2 mr-4 w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
         >
           Resume
         </a>
         <button
-          onClick={openContactModal} // Call the openContactModal function
-          className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[261px] w-48 h-14 
-          rounded-full drop-shadow-lg bg-purple-600 hover:bg-purple-800 hover:animate-pulse"
+          className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[260px] w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
+          onClick={openModal}
         >
           Contact Me!
         </button>
-        
-        
+        {showModal && (
+          <Contact closeModal={closeModal}>
+            <button onClick={closeModal} className="text-white">
+              X
+            </button>
+          </Contact>
+        )}
+
         <div className="flex space-x-4 items-center">
         <a
           href="https://github.com/example-link"
@@ -119,13 +121,6 @@ function App() {
         {/* Similar code for other social buttons */}
         </div>
 
-        {/* Contact Modal */}
-        {isContactModalOpen && (
-        <div className="contact-modal-overlay">
-          <ContactModal onClose={closeContactModal} />
-        </div>
-      )}
-      
       </div>
     </div>
   );

@@ -33,35 +33,36 @@
   //border-radius: inherit;
 }
 
+/* Dark background when Contact Modal opens */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity value as needed */
+  z-index: -1; /* Place the overlay behind the modal content */
+}
+/* Contact Modal */
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 /* Add styles for the overlay */
-.contact-modal-overlay {
+.contact-modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 150px);
+  //width: 550px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-}
-
-/* Add styles for the modal */
-.contact-modal {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  max-width: 800px; /* Increase this value to make the modal wider */
-  width: 100%; /* Added to ensure the modal takes full width if max-width is exceeded */
-}
-
-/* Style the close button */
-.close-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  margin-top: 10px;
 }
