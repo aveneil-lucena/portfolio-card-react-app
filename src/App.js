@@ -19,8 +19,8 @@ const App = () => {
       <div className="portfolio-card-container flex p-8 rounded-t-2xl 
       bg-gradient-to-b from-blue-200 via-indigo-200 to-transparent">
         <div className="w-1/4 p-6">
-          <div className="flex justify-between items-end h-full">
-            <div className="w-14 h-24 relative drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border
+          <div className="flex justify-between items-center h-full">
+            <div className="w-14 h-14 absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border
             hover:motion-safe:animate-spin">
               <img
                 src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
