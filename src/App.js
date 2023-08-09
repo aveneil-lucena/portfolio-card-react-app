@@ -17,7 +17,7 @@ const App = () => {
     <div className="portfolio-container flex flex-col items-center justify-center h-screen bg-gray-000">      
     {/* Portfolio Card Container */}
       <div className="portfolio-card-container flex p-8 rounded-t-2xl 
-      bg-gradient-to-b from-blue-300 via-purple-200 to-transparent">
+      bg-gradient-to-b from-blue-200 via-indigo-200 to-transparent">
         <div className="w-1/4 p-6">
           <div className="flex justify-between items-end h-full">
             <div className="w-14 h-24 relative drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border
