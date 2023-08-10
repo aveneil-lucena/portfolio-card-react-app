@@ -35,7 +35,7 @@ const App = () => {
           <p className="text-gray-800">
             What's up! Welcome to my Portfolio Card, my name is
           </p>
-          <h1 className="text-2xl font-bold mb-2 text-gray-900">Bazinga</h1>
+          <h1 className="text-2xl font-bold mb-2 text-gray-900">BABABOOEY</h1>
           <p className="text-gray-700">
             a <b><span className="full-stack animate-pulse">Full-Stack Developer</span></b> with a passion for creativity, simplicity, and the aesthetically pleasing. 
             <br></br>
@@ -120,7 +120,6 @@ const App = () => {
         </a>
         {/* Similar code for other social buttons */}
         </div>
-
       </div>
     </div>
   );

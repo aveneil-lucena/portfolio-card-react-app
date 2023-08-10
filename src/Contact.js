@@ -91,20 +91,20 @@ const Contact = ({ closeModal, children }) => {
                 <textarea
                 name="message"
                 required
-                className="w-full mt-2 h-56 px-3 py-1 resize-none appearance-none bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+                className="w-full mt-2 h-56 px-3 py-1 resize-none bappearance-none bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
                 placeholder="Type here..."
                 ></textarea>
             </div>
             <button
                 type="submit"
-                className="w-full px-2 py-3 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg duration-150"
+                className="w-full px-2 py-3 text-white font-medium bg-indigo-800 hover:bg-indigo-500 active:bg-gray-900 rounded-lg duration-150"
             >
                 Submit
             </button>
                 </form>
                 </div>
             </div>
-            <div className='absolute inset-0 blur-[118px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]' 
+            <div className='absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]' 
                 style={{ background: "linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}></div>
         </main>
         {children}
