@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+import './animations.css';
 import Contact from './Contact';
 
 const App = () => {
@@ -14,20 +15,34 @@ const App = () => {
   };
 
   return (
-    <div className="portfolio-container flex flex-col items-center justify-center h-screen bg-gray-000">      
+<div className="portfolio-container flex flex-col items-center justify-center h-screen bg-gray-000 gradient-bg">
     {/* Portfolio Card Container */}
-      <div className="portfolio-card-container flex p-8 rounded-t-2xl 
-      bg-gradient-to-b from-blue-200 via-indigo-200 to-transparent">
-        <div className="w-1/4 p-6">
-          <div className="flex justify-between items-center h-full">
-            <div className="w-14 h-14 absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border
-            hover:motion-safe:animate-spin">
-              <img
-                src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
-                alt="Avatar"
-                className="rounded-full"
-              />
-            </div>
+      <div className="portfolio-card-container flex p-8 rounded-t-2xl z-0
+      bg-gradient-to-b from-blue-200 via-indigo-200 to-transparent shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">
+        <div className="w-1/4 p-8">
+        {/* First Avatar */}
+          <div className="flex justify-center items-start w-[150px] h-[150px] absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border">
+            <img
+              src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
+              alt="Avatar"
+              className="rounded-full"
+            />
+          </div>
+        {/* Second Avatar */}
+          <div className="flex justify-between items-start w-[90px] h-[90px] absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border">
+            <img
+              src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
+              alt="Second Avatar"
+              className="rounded-full"
+            />
+          </div>
+        {/* Third Avatar */}
+          <div className="flex justify-between items-start w-[90px] h-[90px] absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border">
+            <img
+              src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
+              alt="Third Avatar"
+              className="rounded-full"
+            />
           </div>
         </div>
 
@@ -56,7 +71,7 @@ const App = () => {
       </div>
 
       {/* Buttons Container */}
-      <div className="portfolio-buttons-container flex justify-between p-4 pt-14 pb-14 bg-gray-000 rounded-b-2xl bg-gradient-to-t from-transparent via-purple-100 to-transparent">
+      <div className="portfolio-buttons-container flex justify-between p-6 pt-14 pb-14 bg-gray-000 rounded-b-2xl bg-gradient-to-t from-transparent via-purple-100 to-transparent">
         <a
           href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
           target="_blank"
@@ -71,11 +86,10 @@ const App = () => {
         >
           Contact Me!
         </button>
+
+        {/* Allows the modal to close on exit button click */ }
         {showModal && (
           <Contact closeModal={closeModal}>
-            <button onClick={closeModal} className="text-white">
-              X
-            </button>
           </Contact>
         )}
 

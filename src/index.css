@@ -4,7 +4,26 @@
 
 /* src/index.css */
 .portfolio-card-container {
-  //background-image: linear-gradient(to bottom, rgba(166,201,255,1), rgba(189,147,243,0.5), rgba(189,147,243,0));
+  //z-index: 0;
+}
+/* Pseudo-element stylings of the gradient-bg page on the main site */
+.gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //z-index: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(192, 132, 252, 0.15) 15%,
+    rgba(14, 165, 233, 0.15) 15%,
+    rgba(200, 145, 255, 0.05) 35%,
+    rgba(79, 70, 229, 0.01) 15%,
+    rgba(192, 132, 252, 0.05) 5%
+  );
+  filter: blur(150px); /* Adjust the blur amount as needed */
 }
 
 .shadow-inner { 
@@ -12,12 +31,12 @@
 }
 
 .gradient-border {
-  width: 125px; /* Adjust the width as needed */
-  height: 125px; /* Adjust the height as needed */
+  //width: 125px; /* Adjust the width as needed */
+  //height: 125px; /* Adjust the height as needed */
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  border: 1px solid transparent;
+  border: 4px indigo ridge;
   background-image: linear-gradient(to bottom, darkblue, darkorchid);
 }
 
@@ -70,7 +89,6 @@
 /* Add these styles to your CSS file */
 .notification {
   position: fixed;
-  align-items: end;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -98,6 +116,6 @@
 .timer-bar {
   display: flex;
   height: 100%;
-  background-color: rgba(145, 255, 255, 0.7);
+  background-color: rgba(85, 255, 255, 1);
   transition: width 100ms linear;
 }
