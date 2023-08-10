@@ -1,21 +1,54 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 
-const Contact = ({ closeModal, children }) => {
+const Contact = ({ closeModal, children }) => {    
     const form = useRef();
+    const [notification, setNotification] = useState({ 
+        message: '', 
+        show: false 
+    });
+
+    const [timerProgress, setTimerProgress] = useState(0);
+
+    const showNotification = (message, duration = 3000) => {
+      setNotification({ message, show: true });
+      setTimerProgress(0); // Reset timer progress
+  
+      // Start the timer
+      const timer = setTimeout(() => {
+        setNotification({ message: "", show: false });
+        setTimerProgress(0); // Reset timer progress
+      }, duration);
+  
+    // Update the timer progress every 100ms
+    const interval = setInterval(() => {
+        setTimerProgress((prevProgress) => prevProgress + (100 / duration) * 100);
+    }, 100);
+  
+    // Clear the timer and interval on unmount or when showing another notification
+    return () => {
+        clearTimeout(timer);
+        clearInterval(interval);
+      };
+    };
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_8epfwtc', 'template_hszdikz', form.current, '3ak7rT509eLo80psg')
-            .then((result) => {
-                console.log(result.text);
-                console.log("Message sent!")
-                // Add any additional logic here, such as showing a success message
-            }, (error) => {
-                console.log(error.text);
-                console.log("There was an error sending the message.")
-                // Handle the error and provide user feedback if needed
+        emailjs
+        .sendForm(
+            'service_8epfwtc', 
+            'template_hszdikz', 
+            form.current, 
+            '3ak7rT509eLo80psg')
+        .then((result) => {
+          console.log(result.text);
+          showNotification('Message successfully sent!', 6000);
+        })
+        .catch((error) => {
+          console.log(error.text);
+          showNotification('There was an error sending the message.', 7000); 
+          // Show the message for a longer duration
         });
     };
 
@@ -24,9 +57,21 @@ const Contact = ({ closeModal, children }) => {
     <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="modal-overlay">
         <div className="modal-content bg-white max-w-md p-4 rounded-lg shadow-lg relative">          
-        <main className="relative py-4">
+          <main className="relative py-4">
+          {/* Notification when user submits contact form */}
+          {notification.show && (
+          <div className="notification">
+            {notification.message}
+            <div className="timer-bar-container">
+              <div
+                className="timer-bar"
+                style={{ width: `${timerProgress}%` }}
+              ></div>
+            </div>
+          </div>
+        )}
             <div className="relative z-10 max-w-screen-xl mx-auto text-gray-600 sm:px-4 md:px-8">
-            {/* Close Button */}
+            {/* Close Button on the contact form */}
             <button 
               onClick={closeModal} 
               className="close-button text-gray-500 absolute top-2 right-2 animate-pulse">
@@ -45,14 +90,14 @@ const Contact = ({ closeModal, children }) => {
                     </p>
                 </div>
                 <div className="mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl">
-                <form ref={form} onSubmit={sendEmail} className="space-y-5">
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <div>
                 <label className="font-medium">Full Name</label>
                 <input
                 type="text"
                 name="user_name"
                 required
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-md rounded-lg"
                 placeholder="Name"
                 />
             </div>
@@ -62,7 +107,7 @@ const Contact = ({ closeModal, children }) => {
                 type="email"
                 name="user_email"
                 required
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-md rounded-lg"
                 placeholder="example@email.com"
                 />
             </div>
@@ -91,18 +136,18 @@ const Contact = ({ closeModal, children }) => {
                 <textarea
                 name="message"
                 required
-                className="w-full mt-2 h-56 px-3 py-1 resize-none bappearance-none bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+                className="w-full mt-2 h-56 px-3 py-1 resize-none appearance-none bg-transparent outline-none border focus:border-gray-800 shadow-md rounded-lg"
                 placeholder="Type here..."
                 ></textarea>
             </div>
             <button
                 type="submit"
-                className="w-full px-2 py-3 text-white font-medium bg-indigo-800 hover:bg-indigo-500 active:bg-gray-900 rounded-lg duration-150"
+                className="w-full px-2 py-3 text-white font-medium bg-indigo-800 hover:bg-indigo-500 active:bg-gray-900 shadow-md rounded-lg duration-150 hover:animate-pulse"
             >
                 Submit
             </button>
-                </form>
-                </div>
+            </form>
+            </div>
             </div>
             <div className='absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]' 
                 style={{ background: "linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}></div>

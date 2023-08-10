@@ -56,7 +56,7 @@ const App = () => {
       </div>
 
       {/* Buttons Container */}
-      <div className="portfolio-buttons-container flex justify-between p-4 pt-24 bg-gray-000 rounded-b-2xl bg-gradient-to-t from-transparent via-purple-50 to-transparent">
+      <div className="portfolio-buttons-container flex justify-between p-4 pt-14 pb-14 bg-gray-000 rounded-b-2xl bg-gradient-to-t from-transparent via-purple-100 to-transparent">
         <a
           href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
           target="_blank"
@@ -84,8 +84,8 @@ const App = () => {
           href="https://github.com/example-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="github-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:scale-125 duration-100"
+          className="github-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:animate-pulse hover:scale-125 duration-250 "
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/github.svg'}
@@ -96,8 +96,8 @@ const App = () => {
         <a
           href="https://www.instagram.com/example-link/"                target="_blank"
           rel="noopener noreferrer"
-          className="instagram-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-pink-500 hover:to-yellow-500 ... hover:scale-125 duration-100"
+          className="instagram-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-pink-500 hover:to-yellow-500 ... drop-shadow-lg hover:animate-pulse hover:scale-125 duration-250"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/instagram.svg'}
@@ -109,8 +109,8 @@ const App = () => {
           href="https://linkedin.com/in/example-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-md rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-blue-500 hover:to-blue-200 ... hover:scale-125 duration-100"
+          className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-blue-500 hover:to-blue-200 ... hover:animate-pulse hover:scale-125 duration-250"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
@@ -118,6 +118,7 @@ const App = () => {
             className=""
           />
         </a>
+
         {/* Similar code for other social buttons */}
         </div>
       </div>
