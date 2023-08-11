@@ -21,7 +21,7 @@ const App = () => {
       bg-gradient-to-b from-blue-200 via-indigo-200 to-transparent shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">
         <div className="w-1/4 p-8">
         {/* First Avatar */}
-          <div className="flex justify-center items-start w-[150px] h-[150px] absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border">
+          <div className="flex justify-center items-start w-[120px] h-[120px] absolute drop-shadow-md shadow-lg shadow-indigo-500/50 gradient-border">
             <img
               src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
               alt="Avatar"
@@ -56,6 +56,9 @@ const App = () => {
             <br></br>
             <br></br>I love to code, but I also have a hobby for games, and photography,video
             <br></br>cinematography and video editing.
+            <br></br>
+            <br></br>
+            <br></br>
             <br></br>
             <br></br>
             <br></br>
