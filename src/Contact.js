@@ -1,30 +1,39 @@
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
+import ThemesDropdown from "./ThemesDropdown"; //here for testing purposes
 
-const Contact = ({ closeModal, children }) => {    
+const Contact = ({ closeModal, /*currentTheme,*/ children }) => {    
     const form = useRef();
+
+    /* Here for testing purposes */
+    const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'sunset'
+    const handleThemeChange = (theme) => {
+        console.log('Selected Theme:', theme);
+        setCurrentTheme(theme);
+    };   
     const [notification, setNotification] = useState({ 
         message: '', 
         show: false 
-    });
+    });    
+    /* Here for testing purposes */
 
     const [timerProgress, setTimerProgress] = useState(0);
 
     const showNotification = (message, duration = 3000) => {
-      setNotification({ message, show: true });
-      setTimerProgress(0); // Reset timer progress
-  
-      // Start the timer
-      const timer = setTimeout(() => {
-        setNotification({ message: "", show: false });
+        setNotification({ message, show: true });
         setTimerProgress(0); // Reset timer progress
-      }, duration);
-  
+
+    // Start the timer
+    const timer = setTimeout(() => {
+    setNotification({ message: "", show: false });
+    setTimerProgress(0); // Reset timer progress
+    }, duration);
+
     // Update the timer progress every 100ms
     const interval = setInterval(() => {
         setTimerProgress((prevProgress) => prevProgress + (100 / duration) * 100);
     }, 100);
-  
+
     // Clear the timer and interval on unmount or when showing another notification
     return () => {
         clearTimeout(timer);
@@ -54,9 +63,11 @@ const Contact = ({ closeModal, children }) => {
 
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="modal-overlay">
-        <div className="modal-content bg-white max-w-md p-4 rounded-lg shadow-lg relative">          
+    <div className={`fixed inset-0 flex items-center justify-center z-50`}>
+      <div className={`modal-overlay ${currentTheme}`}>
+      {/* Themes Dropdown */}
+      <ThemesDropdown currentTheme={currentTheme} onChange={handleThemeChange} />
+        <div className={`modal-content ${currentTheme} bg-white max-w-md p-4 rounded-lg relative`}>          
           <main className="relative py-4">
           {/* Notification when user submits contact form */}
           {notification.show && (
@@ -70,29 +81,31 @@ const Contact = ({ closeModal, children }) => {
             </div>
           </div>
         )}
-            <div className="relative z-10 max-w-screen-xl mx-auto text-gray-600 sm:px-4 md:px-8">
+            <div className={`contact-input ${currentTheme} relative z-10 max-w-screen-xl mx-auto sm:px-4 md:px-8 `}>
             {/* Close Button on the contact form */}
-            <button 
-              onClick={closeModal} 
-              className="close-button text-gray-500 absolute top-2 right-2 animate-pulse">
-                <img
-                  src={process.env.PUBLIC_URL + '/icons/close.svg'}
-                  alt="Close"
-                  className="w-10 h-10"
-                />
-            </button>
-                <div className="max-w-lg space-y-2 px-4 sm:mx-auto sm:text-center sm:px-0">
-                    <p className="text-cyan-400 font-semibold text-3xl sm:text-4xl">
-                        Hit me up!
-                    </p>
-                    <p className="text-gray-900 text-[17px]">
-                        Send me a message if you'd like to contact me! 😎👍
-                    </p>
-                </div>
-                <div className="mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl">
-            <form ref={form} onSubmit={sendEmail} className="space-y-5">
+                <button 
+                onClick={closeModal} 
+                className={`close-button ${currentTheme} absolute top-2 right-2`}>
+                    <img
+                    src={process.env.PUBLIC_URL + '/icons/close.svg'}
+                    alt="Close"
+                    className="w-10 h-10"
+                    />
+                </button>
+            {/* Contact form */}
+            <div className="max-w-lg space-y-2 px-4 sm:mx-auto sm:text-center sm:px-0">
+                <p className={`contact-heading ${currentTheme} text-cyan-400 font-semibold text-3xl sm:text-4xl`}>
+                    Hit me up!
+                </p>
+                <p className={`contact-intro ${currentTheme} text-[19px]`}>
+                    Send me a message if you'd like to contact me! 😎👍
+                </p>
+            </div>
+            <div className={`contact-form-box ${currentTheme} mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl`}>
+                <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <div>
-                <label className="font-medium">Full Name</label>
+                <label className={`contact-full-name font-medium ${currentTheme}`}>
+                    Full Name</label>
                 <input
                 type="text"
                 name="user_name"
@@ -102,7 +115,8 @@ const Contact = ({ closeModal, children }) => {
                 />
             </div>
             <div>
-                <label className="font-medium">Email</label>
+                <label className="font-medium">
+                    Email</label>
                 <input
                 type="email"
                 name="user_email"
@@ -132,7 +146,8 @@ const Contact = ({ closeModal, children }) => {
                 </div>
             </div>*/}
             <div>
-                <label className="font-medium">Message</label>
+                <label className="font-medium">
+                    Message</label>
                 <textarea
                 name="message"
                 required
@@ -149,8 +164,9 @@ const Contact = ({ closeModal, children }) => {
             </form>
             </div>
             </div>
-            <div className='absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]' 
-                style={{ background: "linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}></div>
+            <div className={`absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px] ${currentTheme}`} 
+            style={{ background: "linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}>
+            </div>
         </main>
         {children}
         </div>
