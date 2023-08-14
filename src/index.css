@@ -66,28 +66,28 @@ color: black;
 
 /* Light, Dark, Sunset Theme for Portfolio Card Container */
 .light .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(135,197,255,0.65), rgba(159,122,234,0.25), rgba(159,122,234,0.05));
+  background-image: linear-gradient(to bottom, rgba(185,197,255,0.85), rgba(255,122,234,0.25), rgba(252,155,154,0.25));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
 .light .portfolio-buttons-container {
-  background-image: linear-gradient(to top, rgba(135,197,255,0.65), rgba(159,122,234,0.25), rgba(159,122,234,0.05));
+  background-image: linear-gradient(to top, rgba(185,197,255,1), rgba(255,122,234,0.35), rgba(252,155,154,0.25));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
 .dark .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(11,83,148,0.85), rgba(159,122,234,0.75), transparent);
+  background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
 }
 .dark .portfolio-buttons-container {
-  background-image: linear-gradient(to top, rgba(11,83,148,0.85), rgba(159,122,234,0.75), transparent);
+  background-image: linear-gradient(to top, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
 }
 
 .nebula .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(255,0,255,0.15), rgba(95,125,255,0.35), transparent);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
   transition: 0.75s ease-in-out;
 }
 
@@ -291,7 +291,6 @@ height: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.75);
   text-align: center;
 }
-
 .dark .modal-content {
   position: relative;
   max-width: 90vw;
@@ -305,7 +304,6 @@ height: 50%;
   box-shadow: 0 4px 15px rgba(235, 155, 235, 0.25);
   text-align: center;
 }
-
 .nebula .modal-content {
   position: relative;
   max-width: 90vw;
@@ -332,17 +330,61 @@ height: 50%;
   );
   animation: twinkling-stars 15s infinite;
 }
+.light .contact-modal-gradient,
+.dark .contact-modal-gradient {
+background: linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(252,155,154,0.35) 56.49%, rgba(79, 70, 229, 0.4) 115.91%);
+transition: 0.75 ease-in-out;
+}
+.nebula .contact-modal-gradient {
+background: linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%);
+transition: 0.75 ease-in-out;
+}
 
-.light .contact-form-box {
-background-color: white;
+.light .contact-form-box, {
+  background-color: white;
 }
 .dark .contact-form-box {
-background-color: rgba(35, 35, 35, 1);
+  background-color: rgba(35, 35, 35, 1);
 }
 .nebula .contact-form-box {
-background: black;
+  background: black;
 }
-
+.light .contact-full-name,
+.light .contact-email,
+.light .contact-message {
+  color: black;
+}
+.dark .contact-full-name,
+.dark .contact-email,
+.dark .contact-message {
+  color: white;
+}
+.nebula .contact-full-name,
+.nebula .contact-email,
+.nebula .contact-message {
+  color: rgba(255,55,235);
+}
+.light .contact-fullname-textarea {
+  color: black;
+}
+.dark .contact-fullname-textarea,
+.nebula .contact-fullname-textarea {
+  color: white;
+}
+.light .contact-email-textarea {
+  color: black;
+}
+.dark .contact-email-textarea,
+.nebula .contact-email-textarea {
+  color: white;
+}
+.light .contact-message-textarea {
+  color: black;
+}
+.dark .contact-message-textarea,
+.nebula .contact-message-textarea {
+  color: white;
+}
 /* Add styles for the overlay */
 /*
 .contact-modal {

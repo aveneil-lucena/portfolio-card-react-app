@@ -104,24 +104,24 @@ const Contact = ({ closeModal, /*currentTheme,*/ children }) => {
             <div className={`contact-form-box ${currentTheme} mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl`}>
                 <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <div>
-                <label className={`contact-full-name font-medium ${currentTheme}`}>
+                <label className={`contact-full-name ${currentTheme} font-medium `}>
                     Full Name</label>
                 <input
                 type="text"
                 name="user_name"
                 required
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-md rounded-lg"
+                className={`contact-fullname-textarea ${currentTheme} w-full mt-2 px-3 py-2 bg-transparent outline-none border focus:border-gray-600 shadow-md rounded-lg`}
                 placeholder="Name"
                 />
             </div>
             <div>
-                <label className="font-medium">
+                <label className={`contact-email ${currentTheme} font-medium`}>
                     Email</label>
                 <input
                 type="email"
                 name="user_email"
                 required
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-md rounded-lg"
+                className={`contact-email-textarea ${currentTheme} w-full mt-2 px-3 py-2 bg-transparent outline-none border focus:border-gray-600 shadow-md rounded-lg`}
                 placeholder="example@email.com"
                 />
             </div>
@@ -146,12 +146,12 @@ const Contact = ({ closeModal, /*currentTheme,*/ children }) => {
                 </div>
             </div>*/}
             <div>
-                <label className="font-medium">
+                <label className={`contact-message ${currentTheme} font-medium`}>
                     Message</label>
                 <textarea
                 name="message"
                 required
-                className="w-full mt-2 h-56 px-3 py-1 resize-none appearance-none bg-transparent outline-none border focus:border-gray-800 shadow-md rounded-lg"
+                className={`contact-message-textarea ${currentTheme} w-full mt-2 h-56 px-3 py-1 resize-none appearance-none bg-transparent outline-none border focus:border-gray-600 shadow-md rounded-lg`}
                 placeholder="Type here..."
                 ></textarea>
             </div>
@@ -164,8 +164,7 @@ const Contact = ({ closeModal, /*currentTheme,*/ children }) => {
             </form>
             </div>
             </div>
-            <div className={`absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px] ${currentTheme}`} 
-            style={{ background: "linear-gradient(145deg, rgba(192, 132, 252, 0.5) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)" }}>
+            <div className={`contact-modal-gradient ${currentTheme} absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]`}>
             </div>
         </main>
         {children}

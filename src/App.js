@@ -63,7 +63,7 @@ const App = () => {
           <p className={`text-intro ${currentTheme} text-base drop-shadow-sm`}>
             What's up! Welcome to my Portfolio Card, my name is
           </p>
-          <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-widest animate-pulse`}>Name</h1>
+          <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wide animate-pulse`}>AVENEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             a <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}>Full-Stack Developer</span></b> with a passion for creativity, simplicity, and the aesthetically pleasing. 
             <br></br>
@@ -88,7 +88,7 @@ const App = () => {
           Resume
         </a>
         <button
-          className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[430px] w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
+          className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[501px] w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
           onClick={openModal}
         >
           Contact Me!
@@ -111,24 +111,11 @@ const App = () => {
           href="https://www.instagram.com/example-link/"                target="_blank"
           rel="noopener noreferrer"
           className="instagram-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:instagram-button ... drop-shadow-lg hover:scale-125 duration-250 "
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:instagram-button ... drop-shadow-lg hover:scale-125 duration-250 hover:img:invert"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/instagram.svg'}
             alt="Instagram"
-            className=""
-          />
-        </a>
-        <a
-          href="https://linkedin.com/in/example-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent... hover:linkedin-button ... hover:scale-125 duration-250"
-        >
-          <img
-            src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
-            alt="LinkedIn"
             className=""
           />
         </a>
