@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import './index.css';
 import './animations.css';
 import Contact from './Contact';
-import Projects from './ProjectsOverlay';
 import ThemesDropdown from './ThemesDropdown';
 
-const App = () => {
+const Projects = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'sunset'
@@ -23,11 +22,6 @@ const App = () => {
     setCurrentTheme(theme);
   };
 
-  const [showProjectsOverlay, setShowProjectsOverlay] = useState(false);
-
-  const projectsCard = () => {
-    setShowProjectsOverlay(true);
-  };
 
   return (
   <div className={`portfolio-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
@@ -67,11 +61,11 @@ const App = () => {
         {/* Portfolio About Me Container */}
         <div className={`portfolio-about-me ${currentTheme} w-full transparent `}>
           <p className={`text-intro ${currentTheme} text-base drop-shadow-sm`}>
-            What's up! Welcome to my Portfolio Card, my name is
+            THIS IS THE PROJECTS CARD UI
           </p>
-          <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wide animate-pulse`}>AVENEIL LUCENA</h1>
+          <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wide animate-pulse`}>THIS IS THE PROJECTS CARD UI</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
-            a <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}>Full-Stack Developer</span></b> with a passion for creativity, simplicity, and the aesthetically pleasing. 
+            a <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}>THIS IS THE PROJECTS CARD UI</span></b>THIS IS THE PROJECTS CARD UI 
             <br></br>
 
             <br></br>I love to code, but I also have a hobby for games, and photography,video
@@ -85,7 +79,6 @@ const App = () => {
 
       {/* Portfolio Buttons Container */}
       <div className={`portfolio-buttons-container ${currentTheme} flex bottom-0 items-end justify-end p-6 pt-14 pb-14 bg-gray-000 rounded-b-2xl`}>
-      {/* Resume Button */}
         <a
           href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
           target="_blank"
@@ -94,19 +87,11 @@ const App = () => {
         >
           Resume
         </a>
-      {/* Contact Button */}
         <button
-          className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-4 w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
+          className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[501px] w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
           onClick={openModal}
         >
-          Contact Me
-        </button>
-      {/* Projects Button */}
-        <button
-          className="projects-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[295px] w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
-          onClick={projectsCard}
-        >
-          Projects
+          Contact Me!
         </button>
         <div className="flex space-x-4 items-center">
         <a
@@ -136,13 +121,6 @@ const App = () => {
         </a>
         </div>
         
-        {/* Projects Overlay */}
-        {showProjectsOverlay && (
-          <div className={`projects-overlay ${currentTheme} show`}>
-            <Projects projectOverlay={projectsCard}></Projects>
-          </div>
-        )}
-
         {/* Allows the modal to close on exit button click */ }
         {showModal && (
           <Contact closeModal={closeModal}></Contact>
@@ -154,4 +132,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Projects;

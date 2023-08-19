@@ -65,8 +65,8 @@ const Contact = ({ closeModal, /*currentTheme,*/ children }) => {
   return (
     <div className={`fixed inset-0 flex items-center justify-center z-50`}>
       <div className={`modal-overlay ${currentTheme}`}>
-      {/* Themes Dropdown */}
-      <ThemesDropdown currentTheme={currentTheme} onChange={handleThemeChange} />
+      {/* Themes Dropdown 
+      <ThemesDropdown currentTheme={currentTheme} onChange={handleThemeChange} />*/}
         <div className={`modal-content ${currentTheme} bg-white max-w-md p-4 rounded-lg relative`}>          
           <main className="relative py-4">
           {/* Notification when user submits contact form */}
