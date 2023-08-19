@@ -7,6 +7,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
 
   return (
   <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
+      { <div className={`modal-overlay`}></div> }
       {/* Projects Card Container */}
       <div className="projects-card-container flex p-8 rounded-t-2xl z-0
       shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">

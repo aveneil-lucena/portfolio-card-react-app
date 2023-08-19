@@ -476,3 +476,39 @@ transition: 0.75 ease-in-out;
   transform: translate(-100%, -100%);
   z-index: 50;
 }
+/* Contact Modal */
+.dark .projects-container {
+  position: fixed;
+  top: 100%; /* Adjust as needed */
+  left: 100%; /* Adjust as needed */
+  //max-width: 90vw;
+  width: 100%;
+  height: 100%;
+  //margin: 0 auto;
+  //margin-top: 25px;
+  //background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  //box-shadow: 0 4px 15px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  transform: translate(-100%, -100%);
+  z-index: 50;
+}
+/* Contact Modal */
+.nebula .projects-container {
+  position: fixed;
+  top: 100%; /* Adjust as needed */
+  left: 100%; /* Adjust as needed */
+  //max-width: 90vw;
+  width: 100%;
+  height: 100%;
+  //margin: 0 auto;
+  //margin-top: 25px;
+  //background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  //box-shadow: 0 4px 15px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  transform: translate(-100%, -100%);
+  z-index: 50;
+}

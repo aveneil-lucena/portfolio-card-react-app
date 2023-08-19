@@ -140,7 +140,9 @@ const App = () => {
         
         {/* Projects Overlay */}
         {showProjectsOverlay && (
-            <ProjectsOverlay closeModal={closeModal}></ProjectsOverlay>    
+          <div className={`projects-overlay ${currentTheme}`}>  
+            <ProjectsOverlay closeModal={closeModal}></ProjectsOverlay>   
+            </div> 
         )}
 
         {/* Allows the modal to close on exit button click */ }
