@@ -79,7 +79,7 @@ const Contact = ({ closeModal }) => {
             {/* Close Button on the contact form */}
                 <button 
                 onClick={closeModal} 
-                className={`close-button ${currentTheme} absolute top-2 right-2`}>
+                className={`close-contact-button ${currentTheme} absolute top-2 right-2`}>
                     <img
                     src={process.env.PUBLIC_URL + '/icons/close.svg'}
                     alt="Close"

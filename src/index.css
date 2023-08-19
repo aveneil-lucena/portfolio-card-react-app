@@ -68,8 +68,7 @@ color: black;
 }
 
 /* Light, Dark, Sunset Theme for Portfolio Card Container */
-.light .portfolio-card-container,
-.light .projects-card-container {
+.light .portfolio-card-container {
   background-image: linear-gradient(to bottom, rgba(185,197,255,0.85), rgba(255,122,234,0.25), rgba(252,155,154,0.25));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
@@ -79,8 +78,7 @@ color: black;
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
-.dark .portfolio-card-container,
-.dark .projects-card-container {
+.dark .portfolio-card-container {
   background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
@@ -91,8 +89,7 @@ color: black;
   transition: 0.75s ease-in-out;
 }
 
-.nebula .portfolio-card-container,
-.nebula .projects-card-container {
+.nebula .portfolio-card-container {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
   transition: 0.75s ease-in-out;
 }
@@ -249,12 +246,12 @@ color: black;
   z-index: -1; /* Place the overlay behind the modal content */
 }
 
-/* Themes for Popup Close button */
-.light .close-button {
+/* Themes for Popup Contact Close button */
+.light .close-contact-button {
   filter: invert(0);
 }
-.dark .close-button, 
-.nebula .close-button {
+.dark .close-contact-button, 
+.nebula .close-contact-button {
   filter: invert(1);
 }
 
@@ -442,22 +439,37 @@ transition: 0.75 ease-in-out;
   transition: width 100ms linear;
 }
 
-/* ProjectsOverlay.css */
+/* Dark overlay behind the Projects Modal */
 .projects-overlay {
   position: fixed;
-  top: -100%;
-  left: 0;
-  //width: 100%;
-  //height: 100%;
-  background-color: rgba(0, 0, 0, 0.90);
-  //transition: top 0.5s ease-in-out;
-  z-index: 69;
+  inset: 0;
+  //background-color: rgba(0, 0, 0, 0.75);
+  background-image: linear-gradient(to top, rgba(185,185,255,0.70), rgba(0,0,0,0.80));
+  z-index: 0;
 }
 
-.projects-overlay.show {
-  top: 0;
-  z-index: 49;
+/* Themes for Popup Projects Close button */
+.light .close-projects-button,
+.dark .close-projects-button, 
+.nebula .close-projects-button {
+  filter: invert(1);
 }
+
+.light .projects-card-container {
+  background-image: linear-gradient(to bottom, rgba(155,197,255,1), rgba(225,122,234,1), rgba(215,155,154,1));
+  color: var(--light-text-color);
+  transition: 0.75s ease-in-out;
+}
+.dark .projects-card-container {
+  background-image: linear-gradient(to bottom, rgba(15,95,255,1), rgba(200,122,234,1), rgba(195,155,154,1));
+  color: var(--dark-text-color);
+  transition: 0.75s ease-in-out;
+}
+.nebula .projects-card-container {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(105,0,255,1), rgba(195,0,255,1), rgba(125,125,255,1));
+  transition: 0.75s ease-in-out;
+}
+
 /* Contact Modal */
 .light .projects-container {
   position: fixed;
