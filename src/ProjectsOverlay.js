@@ -8,13 +8,17 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
         { name: "Portfolio Website", image: process.env.PUBLIC_URL + '/media/Mittens.png', desc: "My developer portfolio website. Much more stuff from my portfolio card." },
         { name: "Portfolio Card", image: process.env.PUBLIC_URL + '/media/Moo.png', desc: "My developer portfolio card, a smaller project compared to the website portfolio." },
         { name: "HobinRood", image: process.env.PUBLIC_URL + '/media/Mittens.png', desc: "A mock-RobinHood stock application where user can sign up, monitor real-time stock values, and more." },
-        { name: "Smart Chart Clinician", image: process.env.PUBLIC_URL + '/media/Moo.png', desc: "A react-remix powered application where EMT's log patient care, and schedule real-time ambulance bookings." },
-        { name: "Project 3", image: process.env.PUBLIC_URL + '/media/Mittens.png', desc: "To be added!" },
-        { name: "Project 4", image: process.env.PUBLIC_URL + '/media/Moo.png', desc: "To be added!" },
-        { name: "Project 3", image: process.env.PUBLIC_URL + '/media/Mittens.png', desc: "To be added!" },
-        { name: "Project 4", image: process.env.PUBLIC_URL + '/media/Moo.png', desc: "To be added!" },
-        { name: "Project 3", image: process.env.PUBLIC_URL + '/media/Mittens.png', desc: "To be added!" },
-        { name: "Project 4", image: process.env.PUBLIC_URL + '/media/Moo.png', desc: "To be added!" },
+        { name: "Smart Chart Clinician", image: process.env.PUBLIC_URL + '/media/Moo.png', desc: "A Remix react-based application where EMT's log patient care, and real-time ambulance scheduling." },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        { name: "Project", image: process.env.PUBLIC_URL + '/icons/react.svg', desc: "To be added!" },
+        
+        
     // Add more projects
     ];
 
@@ -63,7 +67,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
           {/* Project content */}
           <div className={`projects-row ${currentTheme} flex`}>
             {currentProjects.map((project, index) => (
-            <div key={index} className={`project-card ${currentTheme} w-64 h-60 p-2 rounded-md flex flex-col items-center`}>
+            <div key={index} className={`project-card ${currentTheme} w-56 h-60 p-2 rounded-md flex flex-col items-center`}>
                 <img src={project.image} alt={project.name} className="w-full h-[35%]" />
                 <h3 className={`project-name ${currentTheme} mt-2 text-lg font-semibold text-center underline`}>{project.name}</h3>
                 <p className={`project-description ${currentTheme} mt-2 text-md text-center`}>{project.desc}</p>

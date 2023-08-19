@@ -15,6 +15,66 @@
   --nebula-bg-color: #ff6f00;
   --nebula-text-color: #ffffff;
 }
+.game-hover {
+  cursor: pointer;
+}
+.game-hover#maplestory:hover {
+  font-weight: bold;
+  color: orange;
+}
+.game-hover#overwatch:hover {
+  font-weight: bold;
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #f3ec78, orange);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+.game-hover#valorant:hover {
+  font-weight: bold;
+  color: red;
+}
+
+.game-hover#maplestory:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: url('https://i.giphy.com/media/gL2xOHy1lpfKvwcUOF/giphy.webp');
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  top: -50px;
+  left: 455px;
+}
+
+.game-hover#overwatch:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: url('https://lens-storage.storage.googleapis.com/png/c17239db-c76f-4dd8-a033-d38ec03f6367');
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  top: -50px;
+  left: 550px;
+}
+
+.game-hover#valorant:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/022/636/388/non_2x/valorant-logo-valorant-icon-transparent-free-png.png');
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  top: -30px;
+  left: 635px; /* Adjust the positioning as needed */
+}
 
 /* Light, Dark, Sunset Theme Styles */
 .light, .dark, .nebula {
@@ -73,25 +133,25 @@ color: black;
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
-.light .portfolio-buttons-container, {
-  background-image: linear-gradient(to top, rgba(185,197,255,1), rgba(255,122,234,0.35), rgba(252,155,154,0.25));
-  color: var(--light-text-color);
+.light .portfolio-buttons-container,
+.dark .portfolio-buttons-container,
+.nebula .portfolio-buttons-container {
+  //background-image: linear-gradient(to top, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
+  color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
+  margin-top: 340px;
+  margin-left: 255px;
+  position: fixed;
 }
 .dark .portfolio-card-container {
   background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
   color: var(--dark-text-color);
-  transition: 0.75s ease-in-out;
-}
-.dark .portfolio-buttons-container {
-  background-image: linear-gradient(to top, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
-  color: var(--dark-text-color);
-  transition: 0.75s ease-in-out;
 }
 
 .nebula .portfolio-card-container {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
   transition: 0.75s ease-in-out;
+  
 }
 
 /* Pseudo-element stylings of the gradient-bg page on the main site */
@@ -203,17 +263,14 @@ color: black;
 .light.avatar-icon {
   background-color: transparent;
   transition: 0.75s ease-in-out;
-  pointer-events: none;
 }
 .dark.avatar-icon {
   background-color: rgba(155,65,255,0.45);
   transition: 0.75s ease-in-out;
-  pointer-events: none;
 }
 .nebula.avatar-icon {
   background-color: rgba(175,75,255,0.75);
   transition: 0.75s ease-in-out;
-  pointer-events: none;
 }
 
 .gradient-border {
@@ -540,23 +597,27 @@ transition: 0.75 ease-in-out;
   margin-top: 20px;
 }
 
+/* Pagination for Projects */
 .pagination-button {
   padding: 5px 10px;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.5s;
+}
+.pagination-button.active {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.pagination-button.active {
-  color: #5a67d8;
-}
 /* Add a media query to control the project row layout */
 .projects-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   justify-content: center;
+  transition: transform 0.3s ease-in-out; /* Add transition property */
 }
 /* For screens wider than a certain breakpoint, change the justification to center */
 @media (min-width: 768px) {
