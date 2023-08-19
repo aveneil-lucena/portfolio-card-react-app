@@ -1,21 +1,15 @@
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
-import ThemesDropdown from "./ThemesDropdown"; //here for testing purposes
 
-const Contact = ({ closeModal, /*currentTheme,*/ children }) => {    
+const Contact = ({ closeModal }) => {    
     const form = useRef();
 
-    /* Here for testing purposes */
-    const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'sunset'
-    const handleThemeChange = (theme) => {
-        console.log('Selected Theme:', theme);
-        setCurrentTheme(theme);
-    };   
+    const [currentTheme] = useState('light'); // 'light', 'dark', or 'nebula'  
+    
     const [notification, setNotification] = useState({ 
         message: '', 
         show: false 
     });    
-    /* Here for testing purposes */
 
     const [timerProgress, setTimerProgress] = useState(0);
 
@@ -167,7 +161,6 @@ const Contact = ({ closeModal, /*currentTheme,*/ children }) => {
             <div className={`contact-modal-gradient ${currentTheme} absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]`}>
             </div>
         </main>
-        {children}
         </div>
       </div>
     </div>

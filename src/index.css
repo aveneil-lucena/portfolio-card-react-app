@@ -25,15 +25,18 @@ background-color: transparent;
 color: black;
 }
 /* Light, Dark, Sunset Theme for Portfolio Card Container */
-.light.portfolio-container {
+.light.portfolio-container,
+.light.projects-container {
   background-color: transparent;
   transition: 0.75s ease-in-out;
 }
-.dark.portfolio-container {
+.dark.portfolio-container,
+.dark.projects-container {
   background-color: rgba(0,0,0,0.95);
   transition: 0.75s ease-in-out;
 }
-.nebula.portfolio-container {
+.nebula.portfolio-container,
+.nebula.projects-container {
   background-color: rgba(0,0,0,1);
   transition: 0.75s ease-in-out;
 }
@@ -65,17 +68,19 @@ color: black;
 }
 
 /* Light, Dark, Sunset Theme for Portfolio Card Container */
-.light .portfolio-card-container {
+.light .portfolio-card-container,
+.light .projects-card-container {
   background-image: linear-gradient(to bottom, rgba(185,197,255,0.85), rgba(255,122,234,0.25), rgba(252,155,154,0.25));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
-.light .portfolio-buttons-container {
+.light .portfolio-buttons-container, {
   background-image: linear-gradient(to top, rgba(185,197,255,1), rgba(255,122,234,0.35), rgba(252,155,154,0.25));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
-.dark .portfolio-card-container {
+.dark .portfolio-card-container,
+.dark .projects-card-container {
   background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
@@ -86,7 +91,8 @@ color: black;
   transition: 0.75s ease-in-out;
 }
 
-.nebula .portfolio-card-container {
+.nebula .portfolio-card-container,
+.nebula .projects-card-container {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
   transition: 0.75s ease-in-out;
 }
@@ -235,7 +241,7 @@ color: black;
   //border-radius: inherit;
 }
 
-/* Dark background when Contact Modal opens */
+/* Darker background when Contact Modal opens */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -243,11 +249,12 @@ color: black;
   z-index: -1; /* Place the overlay behind the modal content */
 }
 
-/* Themes for Contact Form Close button */
+/* Themes for Popup Close button */
 .light .close-button {
   filter: invert(0);
 }
-.dark .close-button, .nebula .close-button {
+.dark .close-button, 
+.nebula .close-button {
   filter: invert(1);
 }
 
@@ -440,13 +447,32 @@ transition: 0.75 ease-in-out;
   position: fixed;
   top: -100%;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: top 0.5s ease-in-out;
-  z-index: -1;
+  //width: 100%;
+  //height: 100%;
+  background-color: rgba(0, 0, 0, 0.90);
+  //transition: top 0.5s ease-in-out;
+  z-index: 69;
 }
 
 .projects-overlay.show {
   top: 0;
+  z-index: 49;
+}
+/* Contact Modal */
+.light .projects-container {
+  position: fixed;
+  top: 100%; /* Adjust as needed */
+  left: 100%; /* Adjust as needed */
+  //max-width: 90vw;
+  width: 100%;
+  height: 100%;
+  //margin: 0 auto;
+  //margin-top: 25px;
+  //background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  //box-shadow: 0 4px 15px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  transform: translate(-100%, -100%);
+  z-index: 50;
 }

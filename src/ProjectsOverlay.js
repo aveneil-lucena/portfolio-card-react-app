@@ -1,65 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.css';
 import './animations.css';
-import Contact from './Contact';
 import ThemesDropdown from './ThemesDropdown';
 
-const Projects = () => {
-
-  const [showModal, setShowModal] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'sunset'
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const handleThemeChange = (theme) => {
-    console.log('Selected Theme:', theme);
-    setCurrentTheme(theme);
-  };
-
+const ProjectsOverlay = ({ closeModal, currentTheme }) => {
 
   return (
-  <div className={`portfolio-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
-      {/* Themes Dropdown */}
-      <ThemesDropdown currentTheme={currentTheme} onChange={handleThemeChange}/>
-
-      {/* Portfolio Card Container */}
-      <div className="portfolio-card-container flex p-8 rounded-t-2xl z-0
+  <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
+      {/* Projects Card Container */}
+      <div className="projects-card-container flex p-8 rounded-t-2xl z-0
       shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">
-        <div className={`portfolio-avatars ${currentTheme} w-1/4 p-8 z-0 `}>
-        {/* First Avatar */}
-          <div className={`avatar-icon ${currentTheme} gradient-border flex justify-center items-start w-[150px] h-[150px] mr-14 m-1 absolute drop-shadow-md shadow-md `}>
+        {/* Close Button on the contact form */}
+        <button 
+        onClick={closeModal} 
+        className={`close-button ${currentTheme} absolute top-2 right-2`}>
             <img
-              src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
-              alt="Avatar"
-              className="rounded-full "
-            />
-          </div>
-        {/* Second Avatar */}
-          <div className={`avatar-icon ${currentTheme} gradient-border flex justify-between items-start w-[120px] h-[120px] ml-4 m-1 absolute drop-shadow-md shadow-md `}>
-            <img
-              src={process.env.PUBLIC_URL + '/media/mittens.png'}
-              alt="Second Avatar"
-              className="rounded-full"
-            />
-          </div>
-        {/* Third Avatar */}
-          <div className={`avatar-icon ${currentTheme} gradient-border flex justify-between items-start w-[120px] h-[120px] ml-4 m-1 absolute drop-shadow-md shadow-md `}>
-            <img
-              src={process.env.PUBLIC_URL + '/media/moo.png'}
-              alt="Third Avatar"
-              className="rounded-full"
-            />
-          </div>
-        </div>
-
-        {/* Portfolio About Me Container */}
-        <div className={`portfolio-about-me ${currentTheme} w-full transparent `}>
+            src={process.env.PUBLIC_URL + '/icons/close.svg'}
+            alt="Close"
+            className="w-10 h-10"
+        />
+        </button>
+        {/* Projects About Me Container */}
+        <div className={`projects-about-me ${currentTheme} w-full transparent `}>
           <p className={`text-intro ${currentTheme} text-base drop-shadow-sm`}>
             THIS IS THE PROJECTS CARD UI
           </p>
@@ -67,18 +29,17 @@ const Projects = () => {
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             a <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}>THIS IS THE PROJECTS CARD UI</span></b>THIS IS THE PROJECTS CARD UI 
             <br></br>
-
-            <br></br>I love to code, but I also have a hobby for games, and photography,video
-            <br></br>cinematography and video editing.
+            <br></br>THIS IS THE PROJECTS CARD UI
+            <br></br>THIS IS THE PROJECTS CARD UI
             <br></br>
-            <br></br>I also have two cats, Mittens and Moo, who are extremely crucial in my development role. 😸
+            <br></br>THIS IS THE PROJECTS CARD UI
           </p>
           {/* You can add more content or components here */}
         </div>
       </div>
 
-      {/* Portfolio Buttons Container */}
-      <div className={`portfolio-buttons-container ${currentTheme} flex bottom-0 items-end justify-end p-6 pt-14 pb-14 bg-gray-000 rounded-b-2xl`}>
+      {/* Projects Buttons Container 
+      <div className={`projects-buttons-container ${currentTheme} flex bottom-0 items-end justify-end p-6 pt-14 pb-14 bg-gray-000 rounded-b-2xl`}>
         <a
           href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
           target="_blank"
@@ -121,15 +82,17 @@ const Projects = () => {
         </a>
         </div>
         
-        {/* Allows the modal to close on exit button click */ }
+        {/* Allows the modal to close on exit button click 
         {showModal && (
           <Contact closeModal={closeModal}></Contact>
         )}
-        </div>
+        </div> */}
+  {/* Render your project containers and other content */}
+
       </div>
 
       
   );
 }
 
-export default Projects;
+export default ProjectsOverlay;

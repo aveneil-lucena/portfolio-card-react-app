@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import './index.css';
 import './animations.css';
 import Contact from './Contact';
-import Projects from './ProjectsOverlay';
+import ProjectsOverlay from './ProjectsOverlay';
 import ThemesDropdown from './ThemesDropdown';
 
 const App = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'sunset'
+  const [showProjectsOverlay, setShowProjectsOverlay] = useState(false);
 
-  const openModal = () => {
+  const openContactModal = () => {
     setShowModal(true);
+  };
+
+  const openProjectsOverlay = () => {
+    setShowProjectsOverlay(true);
   };
 
   const closeModal = () => {
     setShowModal(false);
+    setShowProjectsOverlay(false);
   };
 
   const handleThemeChange = (theme) => {
@@ -23,11 +29,7 @@ const App = () => {
     setCurrentTheme(theme);
   };
 
-  const [showProjectsOverlay, setShowProjectsOverlay] = useState(false);
 
-  const projectsCard = () => {
-    setShowProjectsOverlay(true);
-  };
 
   return (
   <div className={`portfolio-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
@@ -97,14 +99,14 @@ const App = () => {
       {/* Contact Button */}
         <button
           className="contact-button flex justify-center font-sans text-xl/9 text-white p-2 mr-4 w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
-          onClick={openModal}
+          onClick={openContactModal}
         >
           Contact Me
         </button>
       {/* Projects Button */}
         <button
           className="projects-button flex justify-center font-sans text-xl/9 text-white p-2 mr-[295px] w-48 h-14 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
-          onClick={projectsCard}
+          onClick={openProjectsOverlay}
         >
           Projects
         </button>
@@ -138,9 +140,7 @@ const App = () => {
         
         {/* Projects Overlay */}
         {showProjectsOverlay && (
-          <div className={`projects-overlay ${currentTheme} show`}>
-            <Projects projectOverlay={projectsCard}></Projects>
-          </div>
+            <ProjectsOverlay closeModal={closeModal}></ProjectsOverlay>    
         )}
 
         {/* Allows the modal to close on exit button click */ }
