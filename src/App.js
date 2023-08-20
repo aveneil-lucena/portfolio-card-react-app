@@ -87,9 +87,9 @@ const App = () => {
             <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover" id="maplestory">MapleStory</span>, <span className="game-hover" id="overwatch">Overwatch</span>, <span className="game-hover" id="valorant">Valorant</span>,
             <br></br>as well as photography, cinematography, and video editing.
             <br></br>
-            <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are extremely crucial in my development role. 😸
+            <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are crucial to my development role. 😸
             <br></br>
-            <br></br>Thanks for checking out this small portfolio card of mines, take a look around!
+            <br></br>Thanks for checking out this small portfolio card of mine, take a look around!
           </p>
           {/* You can add more content or components here */}
         </div>

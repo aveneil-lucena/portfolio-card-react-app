@@ -38,8 +38,7 @@ const Contact = ({ closeModal }) => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs
-        .sendForm(
+        emailjs.sendForm(
             'service_8epfwtc', 
             'template_hszdikz', 
             form.current, 
@@ -65,11 +64,11 @@ const Contact = ({ closeModal }) => {
           <main className="relative py-4">
           {/* Notification when user submits contact form */}
           {notification.show && (
-          <div className="notification">
+          <div className={`notification ${currentTheme}`}>
             {notification.message}
-            <div className="timer-bar-container">
+            <div className={`timer-bar-container ${currentTheme}`}>
               <div
-                className="timer-bar"
+                className={`timer-bar ${currentTheme}`}
                 style={{ width: `${timerProgress}%` }}
               ></div>
             </div>
