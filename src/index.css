@@ -15,6 +15,7 @@
   --nebula-bg-color: #ff6f00;
   --nebula-text-color: #ffffff;
 }
+/* Portfolio card game names interactivity */
 .game-hover {
   cursor: pointer;
 }
@@ -38,7 +39,6 @@
   color: red;
   text-shadow: 0px 1px 2px red;
 }
-
 .game-hover#maplestory:hover::before {
   content: '';
   display: block;
@@ -51,7 +51,6 @@
   top: -50px;
   left: 455px;
 }
-
 .game-hover#overwatch:hover::before {
   content: '';
   display: block;
@@ -64,7 +63,6 @@
   top: -50px;
   left: 550px;
 }
-
 .game-hover#valorant:hover::before {
   content: '';
   display: block;
@@ -167,11 +165,11 @@ color: black;
   //z-index: 0;
   background: linear-gradient(
     160deg,
-    rgba(192, 132, 252, 0.25) 25%,
+    rgba(192, 132, 252, 0.35) 25%,
     rgba(14, 165, 233, 0.25) 15%,
     rgba(200, 145, 255, 0.15) 35%,
     rgba(79, 70, 229, 0.10) 15%,
-    rgba(192, 132, 252, 0.15) 5%
+    rgba(192, 132, 252, 0.35) 5%
   );
   filter: blur(150px);
 }
@@ -222,20 +220,20 @@ color: black;
   z-index: -2;
   transition: 0.75s ease-in-out;
 }
-/* Create the stars */
+/* Create the aura effect behind the portfolio card */
 .nebula.space-background::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  //top: 0;
+  //left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
   background: radial-gradient(
-    rgba(128, 187, 153, 0.35),
-    rgba(255, 187, 253, 0.35),
-    rgba(85, 137, 208, 0.45),
-    rgba(124, 172, 188, 0.15)
+    rgba(255, 187, 153, 0.35),
+    rgba(255, 187, 253, 0.45),
+    rgba(85, 137, 255, 0.35),
+    rgba(0, 0, 0, 0.85)
   );
   opacity: 0.85;  
   filter: blur(150px);
@@ -247,13 +245,13 @@ color: black;
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 150%;
   height: 100%;
   background: url("../../portfolio-react-app/public/media/StarsLoop.gif");
   background-size: 25%;
   animation: gradual-fade 30s linear infinite;
   //scale: 1;
-  z-index: -1;
+  z-index: -10;
   transition: 0.75s ease-in-out;
 }
 
