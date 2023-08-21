@@ -77,11 +77,11 @@ const App = () => {
           <p className={`text-intro ${currentTheme} text-base drop-shadow-sm`}>
             What's up! Welcome to my Portfolio Card, my name is
           </p>
-          <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wide animate-pulse`}>
+          <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wider`}>
             AVENEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for creativity, and aesthetics easy on the eyes. 
+            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for creativity, with a calm aesthetic here and there. 
             <br></br>
 
             <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover" id="maplestory">MapleStory</span>, <span className="game-hover" id="overwatch">Overwatch</span>, <span className="game-hover" id="valorant">Valorant</span>,
@@ -136,7 +136,7 @@ const App = () => {
           />
         </a>
         <a
-          href="https://www.linkedin.com/in/example-link/"                target="_blank"
+          href="https://www.linkedin.com/in/aveneil-lucena/"                target="_blank"
           rel="noopener noreferrer"
           title="My LinkedIn! 😃"
           className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 

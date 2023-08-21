@@ -44,3 +44,22 @@
     transform: translate3d(-540px, 0, 0); /* The image width */
   }
 }
+
+.tooltip-pulsate {
+  animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}

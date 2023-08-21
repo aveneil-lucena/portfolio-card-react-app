@@ -68,12 +68,12 @@
   display: block;
   position: absolute;
   background-image: url('https://static.vecteezy.com/system/resources/previews/022/636/388/non_2x/valorant-logo-valorant-icon-transparent-free-png.png');
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   background-size: cover;
   background-position: center;
-  top: -30px;
-  left: 635px; /* Adjust the positioning as needed */
+  top: -50px;
+  left: 620px; /* Adjust the positioning as needed */
 }
 
 /* Light, Dark, Sunset Theme Styles */
@@ -85,38 +85,77 @@ background-color: transparent;
 color: black;
 }
 /* Light, Dark, Sunset Theme for Portfolio Card Container */
+/* Transitions Portfolio element */
+.light.portfolio-container, .light.projects-container,
+.light .text-intro, .light .text-intro-container,
+.light .text-intro-name {
+  transition: 0.75s ease-in-out;
+}
+.dark.portfolio-container, .dark.projects-container,
+.dark .text-intro, .dark .text-intro-container,
+.dark .text-intro-name {
+  transition: 0.75s ease-in-out;
+}
+.nebula.portfolio-container, .nebula.projects-container,
+.nebula .text-intro, .nebula .text-intro-container,
+.nebula .text-intro-name {
+  transition: 0.75s ease-in-out;
+}
+/*End Transitions Portfolio element */
+
 .light.portfolio-container,
 .light.projects-container {
   background-color: transparent;
-  transition: 0.75s ease-in-out;
 }
 .dark.portfolio-container,
 .dark.projects-container {
   background-color: rgba(0,0,0,0.95);
-  transition: 0.75s ease-in-out;
 }
 .nebula.portfolio-container,
 .nebula.projects-container {
   background-color: rgba(0,0,0,1);
-  transition: 0.75s ease-in-out;
 }
 
 /* Light, Dark, Sunset Theme for Text on main*/
 .light .text-intro, .light .text-intro-container  {
-  color: var(--light-text-color);
-  transition: 0.75s ease-in-out;
+  color: rgba(125,0,100);
 }
 .dark .text-intro, .dark .text-intro-container {
-  color: rgba(255,255,255,0.85);
-  transition: 0.75s ease-in-out;
+  color: rgba(235,165,165);
 }
 .nebula .text-intro, .nebula .text-intro-container {
-  color: var(--dark-text-color);
-  transition: 0.75s ease-in-out;
+  color: rgba(255,235,255);
+}
+
+.text-intro-name {
+  content: '';
+}
+.light .text-intro-name {
+  color: rgba(245,195,255,1);
+  text-shadow: 0px 1px 5px purple;
+}
+.dark .text-intro-name {
+  color: rgba(195,225,255,1);
+  text-shadow: 0px 1px 5px indigo;
 }
 .nebula .text-intro-name {
   color: rgba(175,155,255,1);
-  transition: 0.75s ease-in-out;
+  text-shadow: 0px 1px 5px blue;
+}
+
+.light .projects-text-intro-name,
+.light .projects-text-intro {
+  color: rgba(205,135,255,1);
+  text-shadow: 0px 1px 5px red;
+}
+.dark .projects-text-intro-name,
+.dark .projects-text-intro {
+  color: rgba(195,175,255,1);
+  text-shadow: 0px 1px 5px red;
+}
+.nebula .projects-text-intro-name,
+.nebula .projects-text-intro {
+  color: rgba(175,155,255,1);
 }
 
 /*Social Media buttons*/
@@ -265,11 +304,11 @@ color: black;
   transition: 0.75s ease-in-out;
 }
 .dark.avatar-icon {
-  background-color: rgba(155,65,255,0.45);
+  background-color: rgba(255,145,145,0.75);
   transition: 0.75s ease-in-out;
 }
 .nebula.avatar-icon {
-  background-color: rgba(175,75,255,0.75);
+  background-color: rgba(215,95,255,0.85);
   transition: 0.75s ease-in-out;
 }
 
@@ -530,17 +569,17 @@ transition: 0.75 ease-in-out;
 }
 
 .light .projects-card-container {
-  background-image: linear-gradient(to bottom, rgba(155,197,255,1), rgba(225,122,234,1), rgba(215,155,154,1));
+  background-image: linear-gradient(to bottom, rgba(65,155,255,1), rgba(205,125,245,1) 70%, transparent);
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
 .dark .projects-card-container {
-  background-image: linear-gradient(to bottom, rgba(15,95,255,1), rgba(200,122,234,1), rgba(195,155,154,1));
+  background-image: linear-gradient(to bottom, rgba(36,49,66,255) 25%, rgba(105,35,105,1), rgba(115,55,65,0.85) 75%, transparent);
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
 }
 .nebula .projects-card-container {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(105,0,255,1), rgba(195,0,255,1), rgba(125,125,255,1));
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(105,0,255,0.65) 20%, rgba(135,0,235,1) 25%, rgba(125,125,255,1) 65%, transparent);
   transition: 0.75s ease-in-out;
 }
 
@@ -599,15 +638,67 @@ transition: 0.75 ease-in-out;
   z-index: 50;
 }
 
+/* Projects tab Project Cards */
+.project-card {
+  transition: transform 0.3s ease-in-out; /* Hover effect */
+}
 .light .project-card {
-  box-shadow: 0px 2px 7px 3px rgba(255,225,200,1); 
+  background: rgba(135,115,145,0.25);
+  box-shadow: 0px 2px 5px 5px rgba(235,185,255,1); 
 }
 .dark .project-card {
-  box-shadow: 0px 2px 7px 3px rgba(195,225,175,1); 
-}
-.nebula .project-card {
+  background: rgba(255,195,165,0.25);
   box-shadow: 0px 2px 7px 3px rgba(255,195,255,1); 
 }
+.nebula .project-card {
+  background: rgba(215,195,235,0.25);
+  box-shadow: 0px 2px 7px 3px rgba(255,195,255,1); 
+}
+.light .project-name, .light .project-description {
+  color: rgba(255,225,255,1);
+}
+.dark .project-name, .dark .project-description {
+  color: rgba(255,225,255,1);
+}
+.nebula .project-name, .nebula .project-description {
+  color: rgba(255,205,255,1);
+}
+/* Hover effect when over a project caard */
+.project-link:hover .project-card {
+  transform: scale(1.135); /* Scale size on hover */
+}
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  //left: 50%;
+  //transform: translateX(-50%);
+  padding: 0.5rem;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  //transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+}
+.tooltip.active {
+  visibility: visible;
+  opacity: 1;
+}
+.light .tooltip,
+.nebula .tooltip {
+  background-color: rgba(25, 0, 55, 0.9);
+  color: white;
+}
+.dark .tooltip {
+  background-color: rgba(55, 0, 75, 0.9);
+  color: white;
+}
+
+.project-card:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Page numbers at the bottom of the projects modal */
 .pagination {
   display: flex;
   justify-content: center;
@@ -623,12 +714,13 @@ transition: 0.75 ease-in-out;
   transition: color 0.5s;
 }
 .pagination-button.active {
-  color: #fff;
+  color: white;
+  text-shadow: 0px 3px 6px indigo;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-/* Add a media query to control the project row layout */
+/* Media query to control the project row layout */
 .projects-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -636,9 +728,21 @@ transition: 0.75 ease-in-out;
   justify-content: center;
   transition: transform 0.3s ease-in-out; /* Add transition property */
 }
-/* For screens wider than a certain breakpoint, change the justification to center */
+/* For screens wider than a certain breakpoint, changes the justification to center */
 @media (min-width: 768px) {
   .projects-row {
     justify-content: center;
+  }
+}
+@media (max-height: 665px) {
+  .projects-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    width: 100%;
+    padding: 6px;
+    max-height: 300px; /* Set the maximum height for the container */
+    overflow-y: auto; /* Add a vertical scrollbar when content exceeds container height */
   }
 }
