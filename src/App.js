@@ -48,6 +48,9 @@ const App = () => {
               className="rounded-full"
               title="Me!"
               draggable="false"
+              onError={(e) => {
+                e.target.src = process.env.PUBLIC_URL + '/icons/unavailable.svg';
+              }}
             />
           </div>
         {/* Second Avatar */}
@@ -58,6 +61,9 @@ const App = () => {
               className="rounded-full"
               title="Mittens!"
               draggable="false"
+              onError={(e) => {
+                e.target.src = process.env.PUBLIC_URL + '/icons/unavailable.svg';
+              }}
             />
           </div>
         {/* Third Avatar */}
@@ -68,6 +74,9 @@ const App = () => {
               className="rounded-full"
               title="Moo!"
               draggable="false"
+              onError={(e) => {
+                e.target.src = process.env.PUBLIC_URL + '/icons/unavailable.svg';
+              }}
             />
           </div>
         </div>
@@ -75,7 +84,7 @@ const App = () => {
         {/* Portfolio About Me Container */}
         <div className={`portfolio-about-me ${currentTheme} w-full transparent `}>
           <p className={`text-intro ${currentTheme} text-base drop-shadow-sm`}>
-            What's up! Welcome to my Portfolio Card, my name is
+            Hey there, welcome to my Portfolio Card! My name is
           </p>
           <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wider`}>
             AVENEIL LUCENA</h1>
@@ -136,7 +145,7 @@ const App = () => {
           />
         </a>
         <a
-          href="https://www.linkedin.com/in/aveneil-lucena/"                target="_blank"
+          href="https://www.linkedin.com/in/-/"                target="_blank"
           rel="noopener noreferrer"
           title="My LinkedIn! 😃"
           className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 

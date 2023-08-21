@@ -159,9 +159,6 @@ color: black;
 }
 
 /*Social Media buttons*/
-.instagram-button:hover {
-  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-}
 .linkedin-button:hover {
   background: linear-gradient(rgba(122,122,191,0.85), rgba(0,119,181,0.75));
 }
@@ -171,7 +168,19 @@ color: black;
   background-image: linear-gradient(to bottom, rgba(185,197,255,0.85), rgba(255,122,234,0.25), rgba(252,155,154,0.25));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
+  box-shadow: 0px -5px 25px 5px rgba(255, 90, 255, 0.1);
 }
+.dark .portfolio-card-container {
+  background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
+  color: var(--dark-text-color);
+  box-shadow: 0px -5px 25px 5px rgba(155, 85, 135, 0.1);
+}
+.nebula .portfolio-card-container {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
+  transition: 0.75s ease-in-out;
+  box-shadow: 0px -5px 25px 5px rgba(205, 50, 255, 0.1);
+}
+
 .light .portfolio-buttons-container,
 .dark .portfolio-buttons-container,
 .nebula .portfolio-buttons-container {
@@ -182,18 +191,7 @@ color: black;
   margin-left: 255px;
   position: fixed;
 }
-.dark .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
-  color: var(--dark-text-color);
-}
-
-.nebula .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
-  transition: 0.75s ease-in-out;
-  
-}
-
-/* Pseudo-element stylings of the gradient-bg page on the main site */
+/* Pseudo-element stylings of the gradient-bg page behind the portfolio card */
 .light.gradient-bg::before {
   content: "";
   position: absolute;
@@ -205,10 +203,10 @@ color: black;
   background: linear-gradient(
     160deg,
     rgba(192, 132, 252, 0.35) 25%,
-    rgba(14, 165, 233, 0.25) 15%,
-    rgba(200, 145, 255, 0.15) 35%,
-    rgba(79, 70, 229, 0.10) 15%,
-    rgba(192, 132, 252, 0.35) 5%
+    rgba(14, 165, 233, 0.35) 15%,
+    rgba(200, 145, 255, 0.45) 35%,
+    rgba(145, 70, 229, 0.55) 10%,
+    rgba(192, 132, 252, 0.25) 15%
   );
   filter: blur(150px);
 }
@@ -223,10 +221,10 @@ color: black;
   background: linear-gradient(
     160deg,
     rgba(192, 132, 252, 0.1) 10%,
-    rgba(85, 165, 233, 0.15) 25%,
-    rgba(200, 145, 255, 0.15) 35%,
-    rgba(79, 70, 229, 0.20) 25%,
-    rgba(192, 132, 252, 0.10) 5%
+    rgba(85, 165, 233, 0.25) 25%,
+    rgba(250, 145, 255, 0.20) 35%,
+    rgba(225, 70, 229, 0.25) 25%,
+    rgba(192, 132, 252, 0.20) 5%
   );
   filter: blur(150px);
 }/*
@@ -272,6 +270,7 @@ color: black;
     rgba(255, 187, 153, 0.35),
     rgba(255, 187, 253, 0.45),
     rgba(85, 137, 255, 0.35),
+    rgba(215, 125, 255, 0.25),
     rgba(0, 0, 0, 0.85)
   );
   opacity: 0.85;  
