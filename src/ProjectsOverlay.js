@@ -102,7 +102,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
           <h1 className={`projects-text-intro-header ${currentTheme} mb-3 text-5xl font-bold drop-shadow-sm tracking-wide`}>
             Take a look at some of my projects!
           </h1>
-          <h2 className={`projects-text-intro ${currentTheme} mb-6 text-2xl font-thin drop-shadow-sm tracking-wide`}>
+          <h2 className={`projects-text-intro ${currentTheme} mb-6 text-2xl font-normal drop-shadow-sm tracking-wide`}>
             This page will gradually expand with more projects in the future!
           </h2>
 

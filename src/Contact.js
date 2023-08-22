@@ -85,8 +85,10 @@ const Contact = ({ closeModal }) => {
                     className="w-10 h-10"
                     />
                 </button>
+
             {/* Contact form */}
             <div className="max-w-lg space-y-2 px-4 sm:mx-auto sm:text-center sm:px-0">
+            <p className="easter-egg-text rainbow animate-bounce absolute pointer-events-none">You found me!</p>
                 <p className={`contact-heading ${currentTheme} text-cyan-400 font-semibold text-3xl sm:text-4xl`}>
                     Hit me up!
                 </p>
@@ -94,7 +96,8 @@ const Contact = ({ closeModal }) => {
                     Send me a message if you'd like to contact me! 😎👍
                 </p>
             </div>
-            <div className={`contact-form-box ${currentTheme} mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl`}>
+            <div className={`contact-form-box ${currentTheme} mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl overflow-hidden `}>
+                
                 <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <div>
                 <label className={`contact-full-name ${currentTheme} font-medium `}>
@@ -139,12 +142,14 @@ const Contact = ({ closeModal }) => {
                 </div>
             </div>*/}
             <div>
+                
                 <label className={`contact-message ${currentTheme} font-medium`}>
-                    Message</label>
+                    Message
+                </label>
                 <textarea
                 name="message"
                 required
-                className={`contact-message-textarea ${currentTheme} w-full mt-2 h-56 px-3 py-1 resize-none appearance-none bg-transparent outline-none border focus:border-gray-600 shadow-md rounded-lg`}
+                className={`contact-message-textarea ${currentTheme} w-full mt-2 h-[195px] px-3 py-1 resize-none appearance-none bg-transparent outline-none border focus:border-gray-600 shadow-md rounded-lg`}
                 placeholder="Type here..."
                 ></textarea>
             </div>
@@ -157,6 +162,7 @@ const Contact = ({ closeModal }) => {
             </form>
             </div>
             </div>
+            
             <div className={`contact-modal-gradient ${currentTheme} absolute inset-0 blur-[120px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]`}>
             </div>
         </main>

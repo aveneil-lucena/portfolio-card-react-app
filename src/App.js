@@ -90,10 +90,10 @@ const App = () => {
             AVENEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for creativity, with a calm aesthetic here and there. 
+            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for designing, creativity, and of relaxing themes. 
             <br></br>
 
-            <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover" id="maplestory">MapleStory</span>, <span className="game-hover" id="overwatch">Overwatch</span>, <span className="game-hover" id="valorant">Valorant</span>,
+            <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
             <br></br>as well as photography, cinematography, and video editing.
             <br></br>
             <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are crucial to my development role. 😸
@@ -105,30 +105,30 @@ const App = () => {
       </div>
 
       {/* Portfolio Buttons Container */}
-      <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end p-6 pt-14 pb-14 bg-gray-000 rounded-2xl`}>
+      <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl`}>
       {/* Resume Button */}
         <a
           href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
           target="_blank"
           rel="noopener noreferrer"
-          className="resume-button flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
+          className={`resume-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
         >
           Resume
         </a>
       {/* Contact Button */}
         <button
-          className="contact-button flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[145px] h-12 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
+          className={`contact-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[135px] h-12 rounded-full drop-shadow-lg  hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
           onClick={openContactModal}
         >
           Contact Me
         </button>
       {/* Projects Button */}
-        <button
-          className="projects-button flex justify-center font-sans text-xl/7 text-white p-2 mr-[245px] w-[115px] h-12 rounded-full drop-shadow-lg bg-indigo-500 hover:bg-indigo-700 hover:animate-pulse hover:shadow-inner"
-          onClick={openProjectsOverlay}
-        >
-          Projects
-        </button>
+      <button
+        className={`projects-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-2 sm:mr-[50px] md:mr-[185px] lg:mr-[235px] w-[105px] h-12 rounded-full drop-shadow-lg  hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
+        onClick={openProjectsOverlay}
+      >
+        Projects
+      </button>
         <div className="flex space-x-4 items-center">
         <a
           href="https://github.com/aveneil-lucena"
@@ -145,15 +145,16 @@ const App = () => {
           />
         </a>
         <a
-          href="https://www.linkedin.com/in/-/"                target="_blank"
+          href="https://www.linkedin.com/in/aveneil-lucena/"                
+          target="_blank"
           rel="noopener noreferrer"
           title="My LinkedIn! 😃"
           className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:instagram-button ... drop-shadow-lg hover:scale-125 duration-250 hover:img:invert"
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:scale-125 duration-250"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
-            alt="LinekdIn"
+            alt="LinkedIn"
             className=""
           />
         </a>
