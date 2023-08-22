@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import './animations.css';
 
 const ProjectsOverlay = ({ closeModal, currentTheme }) => {
     const [showTooltip, setShowTooltip] = useState(false);
-
-    const handleMouseEnter = () => {
-    setShowTooltip(true);
-    };
-
-    const handleMouseLeave = () => {
-    setShowTooltip(false);
-    };
 
     // Projects data goes here!
     const projects = [
@@ -67,23 +59,48 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
         // More projects along the way
     ];
 
-    const itemsPerPage = 6; // Number of projects per page
+    const itemsPerRow = 3; // Number of projects per row
+    const rowsPerPageLargeScreen = 2; // Number of rows per page for large screens
+    const rowsPerPageSmallScreen = 1; // Number of rows per page for small screens
+    const breakpoint = 950; // Breakpoint for screen size
+
+    const [rowsPerPage, setRowsPerPage] = useState(rowsPerPageLargeScreen);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= breakpoint) {
+                setRowsPerPage(rowsPerPageSmallScreen);
+            } else {
+                setRowsPerPage(rowsPerPageLargeScreen);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const itemsPerPage = itemsPerRow * rowsPerPage; // Number of projects per page
 
     const [currentPage, setCurrentPage] = useState(1);
-  
+
     const indexOfLastProject = currentPage * itemsPerPage;
     const indexOfFirstProject = indexOfLastProject - itemsPerPage;
     const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-  
+
     const totalPages = Math.ceil(projects.length / itemsPerPage);
-  
+
     const handlePageChange = (page) => {
-      setCurrentPage(page);
+        setCurrentPage(page);
     };
 
-  return (
-  <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
 
+    return (
+        <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen `}>
       {/* Projects Card Container */}
       <div className="projects-card-container flex p-20 rounded-2xl z-0
       shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">
@@ -106,10 +123,10 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
             This page will gradually expand with more projects in the future!
           </h2>
 
-          {/* Project cards content */}
-          <div className={`projects-row ${currentTheme} flex`}>
-            {currentProjects.map((project, index) => (
-                <div key={index}>
+            {/* Project cards content */}
+            <div className={`projects-row ${currentTheme} grid md:grid-cols-${itemsPerRow} gap-4`}>
+                {currentProjects.map((project, index) => (
+                 <div key={index} className="mb-4 md:w-1/2 lg:w-1/3 px-2">
                     <a
                         href={project.link}
                         target="_blank"
@@ -134,18 +151,20 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
             ))}
         </div>
 
-        {/* Pagination */}
-        <div className="pagination">
-            {Array.from({ length: totalPages }, (_, index) => (
-            <button
-                key={index}
-                onClick={() => handlePageChange(index + 1)}
-                className={`pagination-button ${currentPage === index + 1 ? 'active' : ''}`}
-            >
-                {index + 1}
-            </button>
-            ))}
-        </div>
+
+            {/* Pagination */}
+            <div className="pagination">
+                {Array.from({ length: totalPages }, (_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => handlePageChange(index + 1)}
+                        className={`pagination-button ${currentPage === index + 1 ? 'active' : ''}`}
+                    >
+                        {index + 1}
+                    </button>
+                ))}
+            </div>
+
 
         </div>
       </div>
