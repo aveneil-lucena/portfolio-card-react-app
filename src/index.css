@@ -609,17 +609,17 @@ transition: 0.75 ease-in-out;
   z-index: 50;
 }
 .light .projects-card-container {
-  background-image: linear-gradient(to bottom, rgba(105,175,255,0.75), rgba(215,122,234,0.95), rgba(250,132,122,0.8) 70%, transparent);
+  background-image: linear-gradient(to bottom, rgba(105,175,255,0.85) 25%, rgba(185,122,234,0.95), rgba(250,132,122,0.85) 75%, transparent);
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
 }
 .dark .projects-card-container {
-  background-image: linear-gradient(to bottom, rgba(45,49,75,255) 35%, rgba(95,45,105,1), rgba(95,55,85,0.85) 75%, transparent);
+  background-image: linear-gradient(to bottom, rgba(45,49,75,0.85) 35%, rgba(95,45,105,0.9), rgba(95,55,85,0.85) 75%, transparent);
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
 }
 .nebula .projects-card-container {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(155,55,165,0.75) 60%, transparent 93%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(155,55,165,0.95) 62%, transparent 96%);
   transition: 0.75s ease-in-out;
 }
 
@@ -645,7 +645,7 @@ transition: 0.75 ease-in-out;
   transition: transform 0.3s ease-in-out; /* Hover effect */
 }
 .light .project-card {
-  background: linear-gradient(to bottom, rgba(145,25,115,0.25), rgba(145,115,215,1));
+  background: linear-gradient(to bottom, rgba(145,25,115,0.25), rgba(115,145,255,1));
   box-shadow: 0px 2px 5px 5px rgba(235,185,255,1); 
 }
 .dark .project-card {
@@ -653,7 +653,7 @@ transition: 0.75 ease-in-out;
   box-shadow: 0px 2px 7px 3px rgba(255,195,255,1); 
 }
 .nebula .project-card {
-  background: linear-gradient(to bottom, rgba(115,25,155,0.45), rgba(85,115,255,0.75));
+  background: linear-gradient(to top, rgba(155,25,155,0.45), rgba(35,175,255,0.75));
   box-shadow: 0px 2px 7px 1px rgba(255,195,255,1); 
 }
 .light .project-name, .light .project-description {
@@ -674,9 +674,10 @@ transition: 0.75 ease-in-out;
 .tooltip {
   position: absolute;
   bottom: 100%;
+  width: 125%;
   //left: 50%;
   //transform: translateX(-50%);
-  padding: 0.5rem;
+  padding: 0.45rem;
   border-radius: 4px;
   visibility: hidden;
   opacity: 0;
@@ -746,6 +747,7 @@ transition: 0.75 ease-in-out;
 /* Media query to control the project row layout */
 .projects-row {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   justify-content: center;

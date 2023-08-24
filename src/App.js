@@ -43,7 +43,7 @@ const App = () => {
         {/* First Avatar */}
           <div className={`avatar-icon ${currentTheme} gradient-border flex justify-center items-start w-[150px] h-[150px] mr-14 m-1 absolute drop-shadow-md shadow-md `}>
             <img
-              src={process.env.PUBLIC_URL + '/media/portrait.jpg'}
+              src={process.env.PUBLIC_URL + '/media/portrait.png'}
               alt="Avatar"
               className="rounded-full"
               title="Me!"

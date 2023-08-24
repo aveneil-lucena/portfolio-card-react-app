@@ -21,7 +21,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
         image: process.env.PUBLIC_URL + '/media/Projects/hobinrood-app-preview.png', 
         desc: "A mock-RobinHood stock application where user can sign up, monitor real-time stock values, and more.",
             link: "https://not-robin-hood.vercel.app/",
-            tooltip: "Since this is a mock-app with a real database, just use dummy-data such as 123@gmail.com and 1234567 as your password or so.", },
+            tooltip: "Since this is a mock-app with a real database, use our test account {neil@gmail.com, PW: 1234567} as your password or so. DO NOT REGISTER WITH PERSONAL INFO.", },
         { name: "OtterSoft Smart Chart Clinician", 
         image: process.env.PUBLIC_URL + '/icons/react.svg', 
         desc: "A Remix react-based application where EMT's log patient care, and real-time ambulance scheduling.",
@@ -62,9 +62,11 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
     const itemsPerRow = 3; // Number of projects per row
     const rowsPerPageLargeScreen = 2; // Number of rows per page for large screens
     const rowsPerPageSmallScreen = 1; // Number of rows per page for small screens
-    const breakpoint = 950; // Breakpoint for screen size
+    const breakpoint = 768; // Breakpoint for screen size
+    const descriptionBreakpoint = 660; // Breakpoint for removing project description
 
     const [rowsPerPage, setRowsPerPage] = useState(rowsPerPageLargeScreen);
+    const [showFullDescription, setShowFullDescription] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {
@@ -72,6 +74,12 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
                 setRowsPerPage(rowsPerPageSmallScreen);
             } else {
                 setRowsPerPage(rowsPerPageLargeScreen);
+            }
+
+            if (window.innerWidth <= descriptionBreakpoint) {
+                setShowFullDescription(false);
+            } else {
+                setShowFullDescription(true);
             }
         };
 
@@ -135,10 +143,15 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
                         onMouseEnter={() => setShowTooltip(true)}  // Set showTooltip to true on mouse enter
                         onMouseLeave={() => setShowTooltip(false)} // Set showTooltip to false on mouse leave
                     >
-                    <div className={`project-card ${currentTheme} w-56 h-60 p-2 rounded-md flex flex-col items-center`}>
+                    <div className={`project-card ${currentTheme} w-56 h-60 p-2 rounded-md flex flex-col items-center`} 
+                    style={{ height: showFullDescription && window.innerWidth > descriptionBreakpoint ? '225px' : '125px' }}>
                         <img src={project.image} alt={project.name} className={`react-icon ${currentTheme} w-full h-[35%]`} />
                         <h3 className={`project-name ${currentTheme} mt-2 text-lg font-semibold text-center underline`}>{project.name}</h3>
-                        <p className={`project-description ${currentTheme} mt-2 text-md text-center`}>{project.desc}</p>
+
+                        {/* If description is less than a certain width, set to false */}
+                        {showFullDescription && (
+                                    <p className={`project-description ${currentTheme} mt-2 text-md text-center`}>{project.desc}</p>
+                                )}
                         {/* Checks if tooltip exists within project data, else doesn't display */}
                         {project.tooltip && (
                         <div className={`tooltip ${currentTheme} ${showTooltip ? 'tooltip-pulsate' : ''}`}>
