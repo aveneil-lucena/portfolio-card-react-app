@@ -108,7 +108,7 @@ const App = () => {
       <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl`}>
       {/* Resume Button */}
         <a
-          href={process.env.PUBLIC_URL + '/media/your-resume.pdf'}
+          href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume/blob/a8d562d39b019378de4fd57a95ee3ed6a81d0641/AveneilLucena_SoftwareEngineering_2023.pdf'}
           target="_blank"
           rel="noopener noreferrer"
           className={`resume-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
