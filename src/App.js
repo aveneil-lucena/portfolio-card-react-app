@@ -8,7 +8,7 @@ import ThemesDropdown from './ThemesDropdown';
 const App = () => {
 
   const [showModal, setShowModal] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'sunset'
+  const [currentTheme, setCurrentTheme] = useState('light'); // 'light', 'dark', or 'nebula'
   const [showProjectsOverlay, setShowProjectsOverlay] = useState(false);
 
   const openContactModal = () => {
