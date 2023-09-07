@@ -96,7 +96,7 @@ const Contact = ({ closeModal }) => {
                     Send me a message if you'd like to contact me! 😎👍
                 </p>
             </div>
-            <div className={`contact-form-box ${currentTheme} mt-12 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl overflow-hidden `}>
+            <div className={`contact-form-box ${currentTheme} mt-8 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl overflow-hidden `}>
                 
                 <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <div>

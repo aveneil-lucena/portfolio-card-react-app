@@ -198,6 +198,10 @@ color: black;
   position: absolute;
   background: transparent;
 }
+/* Add this class to apply the blur effect */
+.blur {
+  filter: blur(5px); /* Adjust the blur intensity as needed */
+}
 /* Pseudo-element stylings of the gradient-bg page behind the portfolio card */
 .light.gradient-bg::before {
   content: "";
@@ -209,11 +213,11 @@ color: black;
   //z-index: 0;
   background: linear-gradient(
     160deg,
-    rgba(192, 132, 252, 0.35) 25%,
-    rgba(14, 165, 233, 0.35) 15%,
-    rgba(200, 145, 255, 0.45) 35%,
-    rgba(145, 70, 229, 0.55) 10%,
-    rgba(192, 132, 252, 0.25) 15%
+    rgba(192, 132, 252, 0.15) 25%,
+    rgba(14, 165, 233, 0.25) 15%,
+    rgba(200, 145, 255, 0.35) 35%,
+    rgba(145, 70, 229, 0.35) 15%,
+    rgba(192, 132, 252, 0.2) 15%
   );
   filter: blur(150px);
 }
@@ -400,8 +404,8 @@ color: white;
 .modal-content {
   position: relative;
   max-width: 90vw;
-  width: 900px;
-  height: 800px;
+  width: 850px;
+  height: 85%;
   margin: 0 auto;
   margin-top: 5rem;
   padding: 2rem;
@@ -492,23 +496,8 @@ transition: 0.75 ease-in-out;
 .nebula .contact-message-textarea {
   color: white;
 }
-/* Add styles for the overlay */
-/*
-.contact-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100% - 150px);
-  //width: 550px;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}*/ 
 
-/* Add these styles to your CSS file */
+/* Notification timer bar */
 .notification {
   position: fixed;
   bottom: 20px;
@@ -563,21 +552,21 @@ transition: 0.75 ease-in-out;
 .light .projects-overlay {
   position: fixed;
   inset: 0;
-  //background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(215, 225, 255, 0.75);
   background-image: radial-gradient(rgba(225,185,255,0.55), rgba(125,0,255,0.1));
   z-index: 0;
 }
 .dark .projects-overlay {
   position: fixed;
   inset: 0;
-  //background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.55);
   background-image: radial-gradient(rgba(255,155,175,0.60), rgba(0,0,0,0.80));
   z-index: 0;
 }
 .nebula .projects-overlay {
   position: fixed;
   inset: 0;
-  //background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(225,155,255,0.55);
   background-image: radial-gradient(rgba(215,185,255,0.55), rgba(0,0,0,0.75));
   z-index: 0;
 }
@@ -626,8 +615,8 @@ transition: 0.75 ease-in-out;
 /* Project cards stylings */
 .light .projects-text-intro-header,
 .light .projects-text-intro {
-  color: rgba(255,195,255,1);
-  text-shadow: 0px 4px 3.5px rgba(175,105,255,1);
+  color: rgba(255,205,255,1);
+  text-shadow: 0px 4px 3.5px rgba(185,95,225,1);
 }
 .dark .projects-text-intro-header,
 .dark .projects-text-intro {

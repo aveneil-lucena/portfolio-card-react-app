@@ -26,7 +26,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
         image: process.env.PUBLIC_URL + '/icons/react.svg', 
         desc: "A Remix react-based application where EMT's log patient care, and real-time ambulance scheduling.",
             link: "#",
-            tooltip: "NDA to showcase unfortunately 😔",
+            tooltip: "Private project",
         },
         { name: "Project", 
         image: process.env.PUBLIC_URL + '/icons/react.svg', 
@@ -54,7 +54,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
         image: process.env.PUBLIC_URL + '/icons/react.svg', 
         desc: "To be added!",
             link: "#",
-            tooltip: "Tooltip!" 
+            tooltip: "Tooltip for testing purposes" 
         },       
         // More projects along the way
     ];
