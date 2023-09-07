@@ -56,7 +56,7 @@ const App = () => {
         {/* Second Avatar */}
           <div className={`avatar-icon ${currentTheme} gradient-border flex justify-between items-start w-[120px] h-[120px] ml-4 m-1 mt-5 absolute drop-shadow-md shadow-md `}>
             <img
-              src={process.env.PUBLIC_URL + '/media/mittens.png'}
+              src={process.env.PUBLIC_URL + '/media/Mittens.png'}
               alt="Second Avatar"
               className="rounded-full"
               title="Mittens!"
@@ -69,7 +69,7 @@ const App = () => {
         {/* Third Avatar */}
           <div className={`avatar-icon ${currentTheme} gradient-border flex justify-between items-start w-[120px] h-[120px] ml-4 m-1 mt-5 absolute drop-shadow-md shadow-md `}>
             <img
-              src={process.env.PUBLIC_URL + '/media/moo.png'}
+              src={process.env.PUBLIC_URL + '/media/Moo.png'}
               alt="Third Avatar"
               className="rounded-full"
               title="Moo!"
