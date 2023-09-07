@@ -90,7 +90,7 @@ const App = () => {
             AVENEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for designing, creativity, and of relaxing themes. 
+            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for creating, designing, and developing projects. 
             <br></br>
 
             <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
@@ -108,7 +108,7 @@ const App = () => {
       <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl`}>
       {/* Resume Button */}
         <a
-          href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume/blob/a8d562d39b019378de4fd57a95ee3ed6a81d0641/AveneilLucena_SoftwareEngineering_2023.pdf'}
+          href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume/blob/main/Aveneil%20Lucena%20SoftwareEngineering%202023.pdf'}
           target="_blank"
           rel="noopener noreferrer"
           className={`resume-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
