@@ -90,7 +90,8 @@ const App = () => {
             AVENEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer</span></b> with a passion for creating, designing, and developing projects. 
+            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b> with a passion for 
+            <br></br>creating, designing, and developing projects. 
             <br></br>
 
             <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
