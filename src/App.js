@@ -95,7 +95,7 @@ const App = () => {
             <br></br>
 
             <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
-            <br></br>as well as photography, cinematography, and video editing.
+            <br></br>as well as graphic design, photography, cinematography, and video editing.
             <br></br>
             <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are crucial to my development role. 😸
             <br></br>
