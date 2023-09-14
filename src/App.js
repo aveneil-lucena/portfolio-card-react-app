@@ -90,8 +90,8 @@ const App = () => {
             AVENEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b> with a passion for 
-            <br></br>creating, designing, and developing projects. 
+            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b>  
+            <br></br>with a passion for creating, designing, and developing projects. 
             <br></br>
 
             <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
@@ -99,7 +99,7 @@ const App = () => {
             <br></br>
             <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are crucial to my development role. 😸
             <br></br>
-            <br></br>Thanks for checking out this small portfolio card of mine, take a look around!
+            <br></br>Thanks for checking out my card, take a look around!
           </p>
           {/* You can add more content or components here */}
         </div>
