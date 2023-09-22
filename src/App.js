@@ -91,11 +91,12 @@ const App = () => {
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
             I am a 
             <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b>with a passion
-            <br></br>for creating, designing, and developing projects, using languages such as Java, JavaScript, C#, and more. 
+            <br></br>for creating, designing, and developing projects, using languages such as Java, JavaScript, 
+            <br></br> C#, SQL/NoSQL, and more to learn. 
             <br></br>
 
-            <br></br>I love to code, but I also have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
-            <br></br>as well as graphic design, photography, cinematography, and video editing.
+            <br></br>Besides coding, I have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
+            <br></br>along with graphic design, photography, cinematography, and video editing.
             <br></br>
             <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are crucial to my development role. 😸
             <br></br>
