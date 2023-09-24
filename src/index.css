@@ -20,17 +20,23 @@
   cursor: pointer;
 }
 .game-hover#maplestory:hover {
-  color: orange;
-  text-shadow: 0px 1px 4px red;
-}
-.game-hover#overwatch:hover {
-  background-color: black;
-  background-image: linear-gradient(45deg, orange, red);
+  background-image: linear-gradient(90deg, orange, white);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
+  text-shadow: 0px 0px 3px white;
+}
+.game-hover#overwatch:hover {
+  background-color: black;
+  background-image: linear-gradient(90deg, orange, grey);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+  text-shadow: 0px 1px 3px black;
 }
 .game-hover#valorant:hover {
   color: red;
@@ -46,7 +52,7 @@
   background-size: cover;
   background-position: center;
   top: 0px;
-  left: 455px;
+  left: 415px;
 }
 .game-hover#overwatch:hover::before {
   content: '';
@@ -58,7 +64,7 @@
   background-size: cover;
   background-position: center;
   top: 0px;
-  left: 550px;
+  left: 515px;
 }
 .game-hover#valorant:hover::before {
   content: '';
@@ -190,8 +196,8 @@ color: black;
   //background-image: linear-gradient(to top, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
   color: var(--dark-text-color);
   transition: 0.75s ease-in-out;
-  margin-top: 340px;
-  margin-left: 235px;
+  margin-top: 415px;
+  margin-left: 230px;
   position: absolute;
   background: transparent;
 }

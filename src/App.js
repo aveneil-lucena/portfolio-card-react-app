@@ -88,26 +88,26 @@ const App = () => {
           </p>
           <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wider`}>
             AVENEIL LUCENA</h1>
-          <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm`}>
+          <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm w-[750px] h-[350px]`}>
             I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b>with a passion
-            <br></br>for creating, designing, and developing projects, using languages such as Java, JavaScript, 
-            <br></br> C#, SQL/NoSQL, and more to learn. 
+            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b> specializing in Java, JavaScript, C#, SQL, and a range of other languages. I thrive on the challenge of solving intricate problems and transforming ideas into functional, efficient solutions.
             <br></br>
-
-            <br></br>Besides coding, I have a hobby for games such as <span className="game-hover animate-pulse" id="maplestory">MapleStory</span>, <span className="game-hover animate-pulse" id="overwatch">Overwatch</span>, <span className="game-hover animate-pulse" id="valorant">Valorant</span>,
-            <br></br>along with graphic design, photography, cinematography, and video editing.
+            <br></br>I'm also a passionate gamer, a fondness for titles like 
+            <span id="maplestory" class="game-hover animate-pulse"> MapleStory</span>, 
+            <span id="overwatch" class="game-hover animate-pulse"> Overwatch,</span> and 
+            <span id="valorant" class="game-hover animate-pulse"> Valorant</span>. 
+            I'm also have a knack for graphic design, photography, cinematography, and video editing.
             <br></br>
-            <br></br>I also have two cats, <b>Mittens</b> and <b>Moo</b>, who are crucial to my development role. 😸
+            <br></br>My two cats, Mittens and Moo, often provide moments of levity and creative insight.
             <br></br>
-            <br></br>Thanks for checking out my card, take a look around!
+            <br></br>Thanks for reading my portfolio. Check out my projects, and don't hesitate to contact me for any opportunities or questions you may have!
           </p>
           {/* You can add more content or components here */}
         </div>
       </div>
 
       {/* Portfolio Buttons Container */}
-      <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl`}>
+      <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl mb-1`}>
       {/* Resume Button */}
         <a
           href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume/blob/main/Aveneil%20Lucena%20SoftwareEngineering%202023.pdf'}
