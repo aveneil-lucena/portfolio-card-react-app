@@ -155,7 +155,7 @@ const Contact = ({ closeModal }) => {
             </div>
             <button
                 type="submit"
-                className="w-full px-2 py-3 text-white font-medium bg-indigo-800 hover:bg-indigo-500 active:bg-gray-900 shadow-md rounded-lg duration-150 hover:animate-pulse"
+                className="contact-submit-button w-full px-2 py-3 text-white font-medium bg-indigo-800 hover:bg-indigo-500 active:bg-gray-900 shadow-md rounded-lg duration-150 hover:animate-pulse"
             >
                 Submit
             </button>

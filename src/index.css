@@ -746,11 +746,109 @@ transition: 0.75 ease-in-out;
   transition: transform 0.3s ease-in-out; /* Add transition property */
 }
 /* For screens wider than a certain breakpoint, changes the justification to center */
-@media (min-width: 768px) {
+@media (max-width: 800px) {
   .projects-row {
     justify-content: center;
   }
+  .portfolio-avatars {
+    display: none;
+  }
+  .portfolio-card-container {
+    width: 100%;
+  }
+  .text-intro-container {
+    //width: 30px;
+  }
 }
+@media (max-width: 428px) {
+  .projects-row {
+    justify-content: center;
+  }
+  .portfolio-avatars {
+    display: none;
+  }
+  .portfolio-card-container {
+    height: 100%;
+    border-radius: 0px;
+  }
+  .portfolio-buttons-container {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    align-items: flex-start; /* Align buttons to the left on mobile */
+    left: -90px;
+    padding-top: 65%;
+  }
+  .resume-button,
+  .contact-button,
+  .projects-button {
+    width: 100%; /* Make buttons take full width on mobile */
+    margin-bottom: 5px; /* Add some space between buttons */
+  }
+  .text-intro-name {
+    justify: center;
+    font-size: 38px;
+  }
+  .text-intro-container {
+    width: 100%;
+    font-size: 17.5px;
+    line-height: 1.65;
+  }
+  .modal-content {
+    max-width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border-radius: 0;
+
+    input, .contact-message-textarea {
+      width: 175%;
+      margin-left: -70px;
+      display: flex;
+    }
+  }
+  .contact-submit-button {
+    top: 15%;
+  }
+  .contact-form-box {
+    margin-top: 1rem;
+    border-radius: 20px;
+    height: 60%;
+    width: 110%;
+    margin-left: -1rem;
+  }
+
+  .projects-container {
+    height: 108%;
+    width: 100%;
+    padding: 0px;
+  }
+  .close-projects-button {
+    display: absolute;
+    top: 8%;
+  }
+  .projects-card-container {
+    border-radius: 0;
+  }
+    .projects-text-intro-header {
+      font-size: 25px;
+      line-height: 1.25;
+      //width: 150%;
+    }
+    .projects-text-intro {
+      font-size: 15px;
+      //width: 150%;
+    }
+    .projects-row {
+      margin-left: 5%;
+    }
+    .pagination {
+      font-size: 18px;
+    }
+  
+  .themes-button {
+    top: 95%;
+    filter: invert;
+  }
+}
+
 @media (max-height: 665px) {
   .projects-row {
     display: grid;

@@ -84,7 +84,7 @@ const App = () => {
         {/* Portfolio About Me Container */}
         <div className={`portfolio-about-me ${currentTheme} w-full transparent `}>
           <p className={`text-intro ${currentTheme} text-base drop-shadow-sm`}>
-            Hey there, welcome to my Portfolio Card! My name is
+            Hey there, welcome to my portfolio! My name is
           </p>
           <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wider`}>
             AVENEIL LUCENA</h1>
