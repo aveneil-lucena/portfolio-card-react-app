@@ -110,7 +110,7 @@ const App = () => {
       <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl mb-1`}>
       {/* Resume Button */}
         <a
-          href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume/blob/main/Aveneil%20Lucena%20SoftwareEngineering%202023.pdf'}
+          href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume.git'}
           target="_blank"
           rel="noopener noreferrer"
           className={`resume-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
