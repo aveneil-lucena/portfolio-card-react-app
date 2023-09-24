@@ -10,7 +10,7 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
         { name: "Portfolio Card", 
         image: process.env.PUBLIC_URL + '/media/Projects/portfolio-card-app-preview.png', 
         desc: "My developer portfolio card, a smaller project compared to the website portfolio.",
-            link: "https://portfolio-card-black.vercel.app/",
+            link: "https://alucena.vercel.app/",
             tooltip: "You're on it right now!" },
         { name: "HobinRood", 
         image: process.env.PUBLIC_URL + '/media/Projects/hobinrood-app-preview.png', 
