@@ -96,7 +96,7 @@ const App = () => {
             <span id="maplestory" class="game-hover animate-pulse"> MapleStory</span>, 
             <span id="overwatch" class="game-hover animate-pulse"> Overwatch,</span> and 
             <span id="valorant" class="game-hover animate-pulse"> Valorant</span>. 
-            I'm also have a knack for graphic design, photography, cinematography, and video editing.
+            I also have a knack for graphic design, photography, cinematography, and video editing.
             <br></br>
             <br></br>My two cats, Mittens and Moo, often provide moments of levity and creative insight.
             <br></br>
