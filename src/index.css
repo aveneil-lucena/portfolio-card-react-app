@@ -944,7 +944,8 @@ and (min-width: 412px) and (min-height: 732px) {
     left: 35vw;
   }
 }
-@media only screen and (max-width: 383px) and (min-width: 360px) {
+@media only screen and (max-width: 393px) and (max-height: 842px) and 
+(min-width: 360px) and (min-height: 640px) {
   .projects-row {
     justify-content: center;
   }
@@ -957,9 +958,19 @@ and (min-width: 412px) and (min-height: 732px) {
   }
   .portfolio-buttons-container {
     flex-direction: row; /* Stack buttons vertically on mobile */
-    left: -63.5vw;
-    top: 34vh;
+    right: 10%;
+    bottom: 0;
     transition: none;
+    display: flex;
+  }
+  .linkedin-button, .github-button {
+    width: 42px;
+    height: 42px;
+
+    padding: 4.5px;
+  }
+  .social-buttons-container {
+    margin-bottom: 3.5px;
   }
 
   .resume-button,
@@ -995,7 +1006,7 @@ and (min-width: 412px) and (min-height: 732px) {
   }
   .text-intro-container {
     width: 100%;
-    font-size: 14.5px;
+    font-size: 14.25px;
     line-height: 1.65;
   }
   .modal-content {
