@@ -15,6 +15,7 @@
   --nebula-bg-color: #ff6f00;
   --nebula-text-color: #ffffff;
 }
+
 /* Portfolio card game names interactivity */
 .game-hover {
   cursor: pointer;
@@ -87,6 +88,10 @@
 background-color: transparent;
 color: black;
 }
+.portfolio-container {
+  flex: 1;
+  //overflow: scroll;
+}
 /* Light, Dark, Sunset Theme for Portfolio Card Container */
 /* Transitions Portfolio element */
 .light.portfolio-container, .light.projects-container,
@@ -152,6 +157,11 @@ color: black;
 
 
 /* Buttons */
+.resume-button,
+.contact-button,
+.projects-button {
+  font-size: 1.25rem;
+}
 .light .resume-button,
 .light .contact-button,
 .light .projects-button {
@@ -395,7 +405,7 @@ color: white;
 .easter-egg-text {
   position: flex;
   width: 65%;
-  margin-top: 6.9rem;
+  margin-top: 8.9rem;
   font-size: 3em;
   text-shadow: 0px 3px 3px grey;
   float: left;
@@ -461,7 +471,7 @@ transition: 0.75 ease-in-out;
   background: linear-gradient(to bottom, rgba(55, 55, 55, 1) 50%, transparent);
 }
 .nebula .contact-form-box {
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 1) 10%, transparent);
+  background: linear-gradient(to bottom, rgba(35, 35, 35, 1) 30%, transparent);
 }
 .light .contact-full-name,
 .light .contact-email,
@@ -724,7 +734,7 @@ transition: 0.75 ease-in-out;
 
 
 
-
+/* Mobile styles */
 @media (max-height: 450px) {
   .contact-form-box {
     opacity: 0;
@@ -756,11 +766,70 @@ transition: 0.75 ease-in-out;
   .portfolio-card-container {
     width: 100%;
   }
+  .portfolio-buttons-container {
+    left: -12.5rem;
+  }
   .text-intro-container {
-    //width: 30px;
+    width: 650px;
+    font-size: 17px;
+    line-height: 1.5rem;
   }
 }
-@media (max-width: 428px) {
+@media (max-width: 682px) {
+  .text-intro-container {
+    width: 550px;
+    font-size: 14px;
+    line-height: 1.45rem;
+  }
+}
+@media (max-width: 480px) {
+  .text-intro-container {
+    width: 430px;
+    font-size: 13px;
+    line-height: 1.375rem;
+  }
+  .resume-button,
+  .contact-button,
+  .projects-button {
+    width: 100%; /* Make buttons take full width on mobile */
+    margin-bottom: 5px; /* Add some space between buttons */
+    font-size: 1.05rem;
+    padding-top: 0.65rem;
+    font-weight: bold;
+  }
+  .contact-button {
+    line-height: 1.05rem;
+  }  
+  .projects-button {
+    margin-right: 25px;
+  }
+  .portfolio-buttons-container {
+    top: 26.4%;
+  }
+  .modal-content {
+    max-width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border-radius: 0;
+
+    input, .contact-message-textarea {
+      width: 152.5%;
+      margin-left: -70px;
+      display: flex;
+    }
+  }
+  .contact-submit-button {
+    top: 15%;
+  }
+  .contact-form-box {
+    margin-top: 1rem;
+    border-radius: 20px;
+    height: 60%;
+    width: 110%;
+    margin-left: -1rem;
+  }
+}
+@media only screen and (max-width: 428px) and (min-width: 412px) {
   .projects-row {
     justify-content: center;
   }
@@ -772,20 +841,40 @@ transition: 0.75 ease-in-out;
     border-radius: 0px;
   }
   .portfolio-buttons-container {
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    align-items: flex-start; /* Align buttons to the left on mobile */
-    left: -90px;
-    padding-top: 65%;
+    flex-direction: row; /* Stack buttons vertically on mobile */
+    //align-items: flex-start; /* Align buttons to the left on mobile */
+    left: -53.5vw;
+    top: 43.5vh;
+    //overflow: none;
+    //padding-top: 65%;
+    transition: none;
   }
+
   .resume-button,
-  .contact-button,
   .projects-button {
     width: 100%; /* Make buttons take full width on mobile */
     margin-bottom: 5px; /* Add some space between buttons */
+    font-size: 0.85rem;
+    padding-top: 0.85rem;
+    font-weight: bold;
+  }
+  .projects-button {
+    margin-right: 10px;
+  }
+  .contact-button {
+    width: 100%; /* Make buttons take full width on mobile */
+    margin-bottom: 5px; /* Add some space between buttons */
+    font-size: 0.75rem;
+    //padding-top: 0.85rem;
+    font-weight: bold;
   }
   .text-intro-name {
     justify: center;
     font-size: 38px;
+    margin-top: 4.5px;
+  }
+  .text-intro {
+    margin-top: 4.5px;
   }
   .text-intro-container {
     width: 100%;
@@ -844,8 +933,9 @@ transition: 0.75 ease-in-out;
     }
   
   .themes-button {
-    top: 95%;
-    filter: invert;
+    display: flex;
+    position: fixed;
+    left: 35vw;
   }
 }
 

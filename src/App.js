@@ -107,38 +107,39 @@ const App = () => {
       </div>
 
       {/* Portfolio Buttons Container */}
+      {/* <footer className={`footer ${currentTheme} bg-gray-000 p-4`}> */}
       <div className={`portfolio-buttons-container ${currentTheme} flex items-end justify-end bg-gray-000 rounded-2xl mb-1`}>
       {/* Resume Button */}
         <a
           href={process.env.PUBLIC_URL + 'https://github.com/aveneil-lucena/resume.git'}
           target="_blank"
           rel="noopener noreferrer"
-          className={`resume-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
+          className={`resume-button ${currentTheme} flex justify-center font-sans text-white p-2 mr-4 w-[105px] h-12 rounded-full drop-shadow-lg hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
         >
           Resume
         </a>
       {/* Contact Button */}
         <button
-          className={`contact-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-4 w-[135px] h-12 rounded-full drop-shadow-lg  hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
+          className={`contact-button ${currentTheme} flex justify-center font-sans text-white p-2 mr-4 w-[135px] h-12 rounded-full drop-shadow-lg  hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
           onClick={openContactModal}
         >
           Contact Me
         </button>
       {/* Projects Button */}
       <button
-        className={`projects-button ${currentTheme} flex justify-center font-sans text-xl/7 text-white p-2 mr-2 sm:mr-[50px] md:mr-[185px] lg:mr-[235px] w-[105px] h-12 rounded-full drop-shadow-lg  hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
+        className={`projects-button ${currentTheme} flex justify-center font-sans text-white p-2 mr-2 sm:mr-[50px] md:mr-[185px] lg:mr-[235px] w-[105px] h-12 rounded-full drop-shadow-lg  hover:bg-slate-500 hover:animate-pulse hover:shadow-inner`}
         onClick={openProjectsOverlay}
       >
         Projects
       </button>
-        <div className="flex space-x-4 items-center">
+        <div className="social-buttons-container flex space-x-4 items-center">
         <a
           href="https://github.com/aveneil-lucena"
           target="_blank"
           rel="noopener noreferrer"
           title="My GitHub! 😃"
           className="github-button transition ease-in-out delay-50 w-14 h-14 p-2 mr-1 bg-gray-200 drop-shadow-lg rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:scale-125 duration-250 "
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:scale-105 duration-250 "
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/github.svg'}
@@ -152,7 +153,7 @@ const App = () => {
           rel="noopener noreferrer"
           title="My LinkedIn! 😃"
           className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
-          bg-gradient-to-t from-purple-100 to-transparent ... hover:scale-125 duration-250"
+          bg-gradient-to-t from-purple-100 to-transparent ... hover:scale-105 duration-250"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
@@ -174,6 +175,7 @@ const App = () => {
           <Contact closeModal={closeModal}></Contact>
         )}
         </div>
+        {/* </footer> */}
       </div>
 
       
