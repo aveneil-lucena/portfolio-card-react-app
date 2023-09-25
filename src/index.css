@@ -834,7 +834,7 @@ transition: 0.75 ease-in-out;
     margin-left: -1rem;
   }
 }
-@media only screen and (max-width: 428px) and (min-width: 412px) {
+@media only screen and (max-width: 428px) and (max-height: 847x) and (min-width: 412px) and (min-height: 732px) {
   .projects-row {
     justify-content: center;
   }
