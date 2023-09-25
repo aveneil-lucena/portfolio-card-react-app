@@ -1016,7 +1016,7 @@ and (min-width: 412px) and (min-height: 732px) {
     border-radius: 0;
 
     input, .contact-message-textarea {
-      width: 205%;
+      width: 77vw;
       margin-left: -70px;
       display: flex;
     }
@@ -1030,6 +1030,9 @@ and (min-width: 412px) and (min-height: 732px) {
     height: 60%;
     width: 110%;
     margin-left: -1rem;
+  }
+  .notification {
+    width: 65%;
   }
 
   .projects-container {
