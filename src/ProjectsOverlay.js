@@ -2,28 +2,27 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import './animations.css';
 
-const ProjectsOverlay = ({ closeModal }) => {
-    const [currentTheme] = useState('light'); // 'light', 'dark', or 'nebula'  
-
+const ProjectsOverlay = ({ closeModal, currentTheme }) => {
+    //const [currentTheme] = useState('light'); // 'light', 'dark', or 'nebula'  
     const [showTooltip, setShowTooltip] = useState(false);
 
     // Projects data goes here!
     const projects = [
         { name: "Portfolio Card", 
         image: process.env.PUBLIC_URL + '/media/Projects/portfolio-card-app-preview.png', 
-        desc: "My developer portfolio card, a smaller project compared to the website portfolio.",
+        desc: "My developer portfolio card where you know me and some of my projects I've created.",
             link: "https://alucena.vercel.app/",
             tooltip: "You're on it right now!" },
         { name: "HobinRood", 
         image: process.env.PUBLIC_URL + '/media/Projects/hobinrood-app-preview.png', 
         desc: "A mock-RobinHood stock application where user can sign up, monitor real-time stock values, and more.",
             link: "https://not-robin-hood.vercel.app/",
-            tooltip: "Since this is a mock-app with a real database, use our test account {neil@gmail.com, PW: 1234567} as your password or so. Don't use your actual personal info!", },
-        { name: "OtterSoft Smart Chart Clinician", 
+            tooltip: "This is a mock-app with a real database, use our test account (neil@gmail.com, PW: 1234567). Don't use your actual personal info!", },
+        { name: "OtterSoft Smart Chart", 
         image: process.env.PUBLIC_URL + '/icons/react.svg', 
-        desc: "A Remix react-based application where EMT's log patient care, and real-time ambulance scheduling.",
+        desc: "A Remix react-based application where EMT/EMS clinicians can log patient care, and real-time ambulance scheduling.",
             link: "#",
-            tooltip: "Private project",
+            tooltip: "No content to show",
         },
         { name: "Project", 
         image: process.env.PUBLIC_URL + '/icons/react.svg', 
@@ -115,8 +114,9 @@ const ProjectsOverlay = ({ closeModal }) => {
     <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center`}>
 
       {/* Projects Card Container */}
-      <div className="projects-card-container flex p-6 rounded-2xl z-0
-      shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">
+      <div className={`projects-card-container ${currentTheme} flex pl-14 pr-14 pt-7 rounded-2xl z-0
+      shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)] drop-shadow-xs`}>
+        
         {/* Close Button on the contact form */}
         <button 
         onClick={closeModal} 
@@ -128,12 +128,14 @@ const ProjectsOverlay = ({ closeModal }) => {
         />
         </button>
         {/* Projects About Me Container */}
+        <div className={`contact-modal-gradient ${currentTheme} absolute inset-36 blur-[85px] mx-auto sm:max-w-3xl sm:h-[455px] z-[-1]`}>
+        </div>
         <div className={`projects-about-me ${currentTheme} w-full transparent `}>
           <h1 className={`projects-text-intro-header ${currentTheme} mb-3 text-5xl font-bold drop-shadow-sm tracking-wide`}>
-            Take a look at some of my projects!
+            Check out some of my projects!
           </h1>
-          <h2 className={`projects-text-intro ${currentTheme} mb-6 text-2xl font-normal drop-shadow-sm tracking-wide`}>
-            This page will gradually expand with more projects in the future!
+          <h2 className={`projects-text-intro ${currentTheme} mb-5 text-2xl font-normal drop-shadow-sm tracking-wide`}>
+            This section will expand when there's more to come!
           </h2>
 
             {/* Project cards content */}
@@ -155,7 +157,7 @@ const ProjectsOverlay = ({ closeModal }) => {
 
                         {/* If description is less than a certain width, set to false */}
                         {showFullDescription && (
-                                    <p className={`project-description ${currentTheme} mt-2 text-md text-center`}>{project.desc}</p>
+                                    <p className={`project-description ${currentTheme} mt-0.5 text-sm text-center`}>{project.desc}</p>
                                 )}
                         {/* Checks if tooltip exists within project data, else doesn't display */}
                         {project.tooltip && (

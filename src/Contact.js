@@ -1,10 +1,9 @@
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 
-const Contact = ({ closeModal }) => {    
+const Contact = ({ closeModal, currentTheme }) => {    
     const form = useRef();
-
-    const [currentTheme] = useState('light'); // 'light', 'dark', or 'nebula'  
+    //const [currentTheme] = useState('light'); // 'light', 'dark', or 'nebula'  
     
     const [notification, setNotification] = useState({ 
         message: '', 
