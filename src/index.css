@@ -110,7 +110,7 @@
 
 .light.portfolio-container,
 .light.projects-container {
-  background-color: rgba(245,215,235,0.25);
+  background-color: rgba(255,225,205,0.15);
 }
 .dark.portfolio-container,
 .dark.projects-container {
@@ -157,7 +157,7 @@
   background-image: linear-gradient(to bottom, rgba(195,225,255,0.95), rgba(235,215,255,0.2), rgba(255,155,165,0.2));
   color: var(--light-text-color);
   transition: 0.75s ease-in-out;
-  box-shadow: 0px -5px 25px 5px rgba(125, 190, 255, 0.25);
+  box-shadow: 0px -5px 25px 5px rgba(215, 180, 210, 0.25);
 }
 .dark .portfolio-card-container {
   background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
