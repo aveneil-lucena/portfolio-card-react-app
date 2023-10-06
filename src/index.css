@@ -155,11 +155,25 @@ color: black;
   text-shadow: 0px 3px 5px rgba(125,80,235,1);
 }
 
-
+/* Light, Dark, Sunset Theme for Portfolio Card Container */
+.light .portfolio-card-container {
+  background-image: linear-gradient(to bottom, rgba(195,225,255,0.95), rgba(235,215,255,0.2), rgba(255,155,165,0.2));
+  color: var(--light-text-color);
+  transition: 0.75s ease-in-out;
+  box-shadow: 0px -5px 25px 5px rgba(125, 190, 255, 0.25);
+}
+.dark .portfolio-card-container {
+  background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
+  color: var(--dark-text-color);
+  box-shadow: 0px -5px 25px 5px rgba(155, 85, 135, 0.1);
+}
+.nebula .portfolio-card-container {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
+  transition: 0.75s ease-in-out;
+  box-shadow: 0px -5px 25px 5px rgba(205, 50, 255, 0.1);
+}
 /* Buttons */
-.resume-button,
-.contact-button,
-.projects-button {
+.resume-button, .contact-button, .projects-button {
   font-size: 1.25rem;
 }
 .light .resume-button,
@@ -180,24 +194,6 @@ color: black;
 /*Social Media buttons*/
 .linkedin-button:hover {
   background: linear-gradient(rgba(122,122,191,0.85), rgba(0,119,181,0.75));
-}
-
-/* Light, Dark, Sunset Theme for Portfolio Card Container */
-.light .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(185,197,255,0.85), rgba(255,122,234,0.25), rgba(252,155,154,0.25));
-  color: var(--light-text-color);
-  transition: 0.75s ease-in-out;
-  box-shadow: 0px -5px 25px 5px rgba(255, 90, 255, 0.1);
-}
-.dark .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(75,197,255,0.15), rgba(255,122,234,0.15), rgba(252,155,154,0.25));
-  color: var(--dark-text-color);
-  box-shadow: 0px -5px 25px 5px rgba(155, 85, 135, 0.1);
-}
-.nebula .portfolio-card-container {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(105,0,255,0.25), rgba(195,0,255,0.2), rgba(125,125,255,0.35), transparent);
-  transition: 0.75s ease-in-out;
-  box-shadow: 0px -5px 25px 5px rgba(205, 50, 255, 0.1);
 }
 
 .light .portfolio-buttons-container,
