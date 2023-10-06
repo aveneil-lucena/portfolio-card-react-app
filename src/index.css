@@ -424,7 +424,7 @@ color: white;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
-  z-index: 5;
+  //z-index: 0;
 }
 .light .modal-content {
   background-color: white;
@@ -457,7 +457,7 @@ color: white;
 .dark .contact-modal-gradient {
 background: linear-gradient(145deg, rgba(192, 132, 252, 0.55) 20%, rgba(14, 165, 233, 0.41) 15%, rgba(252,155,154,0.38) 70%, rgba(79, 70, 229, 0.35) 99.91%);
 transition: 0.75 ease-in-out;
-z-index: 3;
+//z-index: 0;
 }
 .nebula .contact-modal-gradient {
 background: linear-gradient(145deg, rgba(192, 132, 252, 0.65) 15.73%, rgba(14, 165, 233, 0.50) 15.74%, rgba(232, 121, 249, 0.33) 56.49%, rgba(79, 70, 229, 0.67) 99.91%);
@@ -473,19 +473,13 @@ transition: 0.75 ease-in-out;
 .nebula .contact-form-box {
   background: linear-gradient(to bottom, rgba(35, 35, 35, 1) 30%, transparent);
 }
-.light .contact-full-name,
-.light .contact-email,
-.light .contact-message {
+.light .contact-full-name, .light .contact-email, .light .contact-message {
   color: black;
 }
-.dark .contact-full-name,
-.dark .contact-email,
-.dark .contact-message {
+.dark .contact-full-name, .dark .contact-email, .dark .contact-message {
   color: white;
 }
-.nebula .contact-full-name,
-.nebula .contact-email,
-.nebula .contact-message {
+.nebula .contact-full-name, .nebula .contact-email, .nebula .contact-message {
   color: rgba(255,55,235);
 }
 .light .contact-fullname-textarea {
@@ -561,28 +555,29 @@ transition: 0.75 ease-in-out;
   background-color: rgba(255,125,255,1);
 }
 
-/* Dark overlay behind the Projects Modal */
+/* Dark overlay behind the Projects Modal */ {/*Scrapped in favor for modal-overlay*/}
+/*
 .light .projects-overlay {
   position: fixed;
   inset: 0;
   background-color: rgba(215, 225, 255, 0.75);
   background-image: radial-gradient(rgba(225,185,255,0.55), rgba(125,0,255,0.1));
-  z-index: 0;
+  //z-index: 0;
 }
 .dark .projects-overlay {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.55);
   background-image: radial-gradient(rgba(255,155,175,0.60), rgba(0,0,0,0.80));
-  z-index: 0;
+  //z-index: 0;
 }
 .nebula .projects-overlay {
   position: fixed;
   inset: 0;
   background-color: rgba(225,155,255,0.55);
   background-image: radial-gradient(rgba(215,185,255,0.55), rgba(0,0,0,0.75));
-  z-index: 0;
-}
+  //z-index: 0;
+} */
 
 /* Themes for Popup Projects Close button */
 /* .light .close-projects-button, */
@@ -607,8 +602,8 @@ transition: 0.75 ease-in-out;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
-  transform: translate(-100%, -100%);
-  z-index: 50;
+  transform: translate(-100%, -100%); /*Centers content into the center*/
+  z-index: 0;
 }
 .light .projects-card-container {
   background-image: linear-gradient(to bottom, rgba(105,175,255,0.85) 25%, rgba(185,122,234,0.95), rgba(250,132,122,0.85) 75%, transparent);
@@ -693,7 +688,7 @@ transition: 0.75 ease-in-out;
 }
 .light .tooltip,
 .nebula .tooltip {
-  background-color: rgba(45, 15, 5, 1);
+  background-color: rgba(0, 0, 5, 1);
   border-radius: 5px;
   color: white;
   font-weight: bold;

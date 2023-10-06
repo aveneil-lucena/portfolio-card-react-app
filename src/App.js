@@ -98,7 +98,7 @@ const App = () => {
             <span id="valorant" class="game-hover animate-pulse"> Valorant</span>. 
             I also have a knack for graphic design, photography, cinematography, and video editing.
             <br></br>
-            <br></br>My two cats, Mittens and Moo, often provide moments of levity and creative insight.
+            <br></br>My two cats, Mittens and Moo, are also notable helpers with my development. 😸
             <br></br>
             <br></br>Thanks for reading my portfolio. Check out my projects, and don't hesitate to contact me for any opportunities or questions you may have!
           </p>

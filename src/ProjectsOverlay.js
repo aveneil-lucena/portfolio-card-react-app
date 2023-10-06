@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import './animations.css';
 
-const ProjectsOverlay = ({ closeModal, currentTheme }) => {
+const ProjectsOverlay = ({ closeModal }) => {
+    const [currentTheme] = useState('light'); // 'light', 'dark', or 'nebula'  
+
     const [showTooltip, setShowTooltip] = useState(false);
 
     // Projects data goes here!
@@ -108,10 +110,12 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
 
 
     return (
-    <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center h-screen z-50`}>
-      <div className={`modal-overlay ${currentTheme}`}></div>
+        <div className={`fixed inset-0 flex items-center justify-center z-50`}>      
+        <div className={`modal-overlay ${currentTheme}`}>
+    <div className={`projects-container ${currentTheme} space-background gradient-bg flex flex-col items-center justify-center`}>
+
       {/* Projects Card Container */}
-      <div className="projects-card-container flex p-20 rounded-2xl z-0
+      <div className="projects-card-container flex p-6 rounded-2xl z-0
       shadow-[0_-10px_18px_-15px_rgba(0,0,0,0.3)]">
         {/* Close Button on the contact form */}
         <button 
@@ -182,7 +186,8 @@ const ProjectsOverlay = ({ closeModal, currentTheme }) => {
 
         </div>
       </div>
-    </div>
+      </div>
+    </div></div>
 
   );
 }

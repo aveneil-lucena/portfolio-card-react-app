@@ -56,7 +56,7 @@ const Contact = ({ closeModal }) => {
 
 
   return (
-    <div className={`fixed inset-0 flex items-center justify-center z-50`}>
+    <div className={`fixed inset-0 flex items-center justify-center z-10`}> {/*Dark Overlay*/}
       <div className={`modal-overlay ${currentTheme}`}>
       {/* Themes Dropdown 
       <ThemesDropdown currentTheme={currentTheme} onChange={handleThemeChange} />*/}
@@ -90,10 +90,10 @@ const Contact = ({ closeModal }) => {
             <div className="max-w-lg space-y-2 px-4 sm:mx-auto sm:text-center sm:px-0">
             <p className="easter-egg-text rainbow animate-bounce absolute pointer-events-none">You found me!</p>
                 <p className={`contact-heading ${currentTheme} text-cyan-400 font-semibold text-3xl sm:text-4xl`}>
-                    Hit me up!
+                    Send me a message!
                 </p>
                 <p className={`contact-intro ${currentTheme} text-[19px]`}>
-                    Send me a message if you'd like to contact me! 😎👍
+                    Want to contact me? Fill out the form below! 😎👍
                 </p>
             </div>
             <div className={`contact-form-box ${currentTheme} mt-8 shadow-[0_-15px_25px_-15px_rgba(0,0,0,0.3)] mx-auto px-24 p-6 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl overflow-hidden `}>
