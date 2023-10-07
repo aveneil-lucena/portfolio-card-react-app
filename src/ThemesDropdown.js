@@ -12,6 +12,7 @@ const ThemesDropdown = ({ currentTheme, onChange }) => {
         <img
           src={process.env.PUBLIC_URL + '/icons/sun-icon.svg'} // Replace with your SVG file path
           alt="Sun"
+          draggable="false"
         />
       </button>
       <button
@@ -23,6 +24,7 @@ const ThemesDropdown = ({ currentTheme, onChange }) => {
         <img
           src={process.env.PUBLIC_URL + '/icons/moon-icon.svg'} // Replace with your SVG file path
           alt="Moon"
+          draggable="false"
         />
       </button>
       <button
@@ -33,7 +35,8 @@ const ThemesDropdown = ({ currentTheme, onChange }) => {
       >
         <img
           src={process.env.PUBLIC_URL + '/icons/stars-icon.svg'} // Replace with your SVG file path
-          alt="Planet"
+          alt="Star"
+          draggable="false"
         />
       </button>
     </div>

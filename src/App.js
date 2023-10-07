@@ -132,7 +132,7 @@ const App = () => {
       >
         Projects
       </button>
-        <div className="social-buttons-container flex space-x-4 items-center">
+      <div className="social-buttons-container flex space-x-4 items-center">
         <a
           href="https://github.com/aveneil-lucena"
           target="_blank"
@@ -140,11 +140,13 @@ const App = () => {
           title="My GitHub! 😃"
           className="github-button transition ease-in-out delay-50 w-14 h-14 p-2 mr-1 bg-gray-200 drop-shadow-lg rounded-md 
           bg-gradient-to-t from-purple-100 to-transparent ... hover:bg-gradient-to-t hover:from-gray-500 hover:to-white-200 ... hover:scale-105 duration-250 "
+          draggable="false"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/github.svg'}
             alt="GitHub"
             className=""
+            draggable="false"
           />
         </a>
         <a
@@ -154,11 +156,13 @@ const App = () => {
           title="My LinkedIn! 😃"
           className="linkedin-button transition ease-in-out delay-50 w-14 h-14 p-2 bg-gray-200 drop-shadow-lg rounded-md 
           bg-gradient-to-t from-purple-100 to-transparent ... hover:scale-105 duration-250"
+          draggable="false"
         >
           <img
             src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
             alt="LinkedIn"
             className=""
+            draggable="false"
           />
         </a>
         </div>
