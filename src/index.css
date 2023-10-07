@@ -84,6 +84,10 @@
 .light, .dark, .nebula {
   transition: 0.75s ease-in-out;
 }
+/* Themes for active theme button */
+.active-button {
+  background-color: white; /* Slightly gray background color */
+}
 
 .portfolio-container {
   flex: 1;
@@ -1073,12 +1077,6 @@ and (min-width: 412px) and (min-height: 732px) {
     left: 35vw;
   }
 }
-
-
-
-
-
-
 
 
 @media (max-height: 665px) {
