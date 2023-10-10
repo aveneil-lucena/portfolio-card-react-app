@@ -87,7 +87,7 @@ const App = () => {
             Hey there, welcome to my portfolio! My name is
           </p>
           <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wider`}>
-            AVENEIL LUCENA</h1>
+            NEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm w-[750px] h-[350px]`}>
             I am a 
             <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b> specializing in Java, JavaScript, C#, SQL, and a range of other languages. I thrive on the challenge of solving intricate problems and transforming ideas into functional, efficient solutions.
