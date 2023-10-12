@@ -90,13 +90,13 @@ const App = () => {
             NEIL LUCENA</h1>
           <p className={`text-intro-container ${currentTheme} text-[15px] drop-shadow-sm w-[750px] h-[350px]`}>
             <br></br>I am a <span className={`text-full-stack ${currentTheme} drop-shadow-sm`}><b>Full-Stack Developer</b></span> skilled in creating dynamic web applications using a wide range of technologies. 
-            With experience in software engineering, I excel in designing and implementing user-friendly interfaces, and ensuring robust back-end functionality.
+            With experience in <span className={`text-full-stack ${currentTheme} drop-shadow-sm`}><b>software engineering</b></span>, I excel in designing and implementing user-friendly interfaces, and ensuring robust back-end functionality.
             <br></br>
-            <br></br>I'm also a passionate gamer, a fondness for titles like 
+            <br></br>I also have a few hobbies on the side like gaming from titles such as 
             <span id="maplestory" class="game-hover animate-pulse"> MapleStory</span>, 
             <span id="overwatch" class="game-hover animate-pulse"> Overwatch,</span> and 
             <span id="valorant" class="game-hover animate-pulse"> Valorant</span>. 
-            I also have a knack for graphic design, photography, cinematography, and video editing.
+            , and a knack for graphic design, photography, cinematography, and video editing from time to time.
             <br></br>
             <br></br>My two cats, Mittens and Moo, are also notable helpers with my development. 😸
             <br></br>
