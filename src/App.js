@@ -100,7 +100,7 @@ const App = () => {
             <br></br>
             <br></br>My two cats, Mittens and Moo, are also notable helpers with my development. 😸
             <br></br>
-            <br></br>Thanks for reading my portfolio. Check out my projects, and don't hesitate to contact me for any opportunities or questions you may have!
+            <br></br>Thanks for checking out my protfolio card, take a look at some of my projects, and don't hesitate to contact me for any opportunities or questions you may have! 
           </p>
           {/* You can add more content or components here */}
         </div>
