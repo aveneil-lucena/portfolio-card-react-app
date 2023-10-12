@@ -88,9 +88,9 @@ const App = () => {
           </p>
           <h1 className={`text-intro-name ${currentTheme} mb-2 text-5xl font-bold drop-shadow-sm tracking-wider`}>
             NEIL LUCENA</h1>
-          <p className={`text-intro-container ${currentTheme} text-lg drop-shadow-sm w-[750px] h-[350px]`}>
-            I am a 
-            <b><span className={`text-full-stack ${currentTheme} drop-shadow-sm`}> Full-Stack Developer and Software Engineer </span></b> specializing in Java, JavaScript, C#, SQL, and a range of other languages. I thrive on the challenge of solving intricate problems and transforming ideas into functional, efficient solutions.
+          <p className={`text-intro-container ${currentTheme} text-[15px] drop-shadow-sm w-[750px] h-[350px]`}>
+            <br></br>I am a <span className={`text-full-stack ${currentTheme} drop-shadow-sm`}><b>Full-Stack Developer</b></span> skilled in creating dynamic web applications using a wide range of technologies. 
+            With experience in software engineering, I excel in designing and implementing user-friendly interfaces, and ensuring robust back-end functionality.
             <br></br>
             <br></br>I'm also a passionate gamer, a fondness for titles like 
             <span id="maplestory" class="game-hover animate-pulse"> MapleStory</span>, 
